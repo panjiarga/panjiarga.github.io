@@ -1,0 +1,186 @@
+
+/* GENERAL */
+.published-container {
+    --h1-size: 5em;
+    --h2-size: 3em;
+    --sidebar-right-width: 200px;
+    --h1-line-height: 1;
+    --h2-line-height: 1;
+    --page-side-padding: 0;
+    --sidebar-left-background: var(--background-secondary);
+    --sidebar-right-background: var(--background-secondary);
+    --nav-parent-item-weight: 400;
+    --sidebar-left-border-width: 0px;
+    --sidebar-right-border-width: 0px;
+    --p-spacing: 8px;
+    --text-highlight-bg: var(--color-accent);
+}
+.theme-light {
+    --color-accent : #0178D4;
+    --color-accent-1 : #6ec0ff;
+    --color-accent-2 : #88cbff;
+}
+.theme-dark {
+    --color-accent : #00FFFF;
+    --color-accent-1 : #00FFFF;
+    --color-accent-2 : #00FFFF;
+    --background-primary: #171717;
+    --background-secondary: #232323;
+}
+.is-flashing {
+    color: var(--background-primary);
+}
+
+/* Border on the right */
+.sliding-windows .publish-renderer {
+    box-shadow: none;
+}
+.sliding-windows .published-container.has-outline .site-body-center-column{
+    padding-right:0;
+}
+
+/* Deep background */
+.sliding-windows .render-container {
+    background: var(--background-primary);
+}
+
+/* Sliding window side title */
+.extra-title {
+    padding-top:32px;
+}
+.extra-title-text {    
+    text-shadow: 0 0 10px var(--background-primary);
+}
+
+/* ------------ MAIN PANEL ------------- */
+.published-container .markdown-preview-view {
+    padding: 0 0 96px 0;
+}
+
+/*
+.markdown-preview-view, .markdown-preview-sizer {
+    width: 1000px;
+}
+.sliding-windows .publish-renderer {
+    width:1000px;
+}
+*/
+
+/* ------------- CONTENT -------------- */
+/* Headers */
+.published-container .markdown-rendered h1,
+.published-container .markdown-rendered h2{
+    border-bottom: none;
+    margin-top: 36px;
+    padding-bottom: 0;
+}
+h6 {
+    display: none !important;
+}
+
+/* Remove underline on links */
+.cm-hmd-internal-link .cm-underline, .internal-link {
+    text-decoration: initial !important;
+}
+
+/* Adding padding back to main panel */
+.markdown-preview-sizer > div:not(div:has(img[alt~="header-img"])) {
+    padding: 0 40px 0 40px;
+}
+
+/* ------------- IMAGE ----------------- */
+p:has(img[alt~="header-img"]) {
+    margin-block-start: 0;
+}
+img[alt~="header-img"] {
+       /* max-width: unset; */
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+}
+img[alt~="banner-img"] {
+    border-radius: 16px;
+    margin: 0;
+    background: var(--background-secondary);
+}
+img[alt~="banner-img"]:hover {
+    transform: translate(-10px,-10px);
+    box-shadow: 10px 10px 0 var(--color-accent);
+
+}
+
+/* ------------ HOVER PREVIEW ----------- */
+.popover.hover-popover > .markdown-embed {
+    height: 100%;
+    max-height: 60vh;
+    max-width: 60vh;    
+    overflow: scroll;
+}
+.popover.hover-popover > .markdown-embed > .markdown-embed-content > .markdown-preview-view {
+    padding: 0;
+}
+.popover.hover-popover .markdown-preview-view h1 {
+    font-size: 3em;
+}
+.markdown-rendered div:has( > :is(p,pre,table,ul,ol)) + div > :is(h1,h2,h3,h4,h5,h6) {
+    margin-top: 8px;
+}
+.markdown-embed-link {
+    background-color: lightgrey;
+}
+.popover.hover-popover img[alt~="header-img"] {
+    /* max-width: unset; */
+     width: 100%;
+     height: 150px;
+     object-fit: cover;
+}
+.popover.hover-popover .markdown-preview-sizer > div:not(div:has(img[alt~="header-img"])) {
+    padding: 0 12px;
+}
+
+/* LEFT COLUMN */
+.site-body-left-column {
+    padding: 0px 24px;
+}
+.nav-view-outer {
+    padding-top: 24px;
+}
+.site-body-left-column-site-logo{
+    display:none;
+}
+.site-body-left-column-site-name{
+    padding:32px 120px 32px 0;
+}
+
+/* RIGHT COLUMN */
+.sliding-windows .site-body-right-column {
+    box-shadow: none;
+    position: relative;
+    background: transparent;
+}
+.site-body-right-column .site-body-right-column-inner {
+    padding: 0 16px;
+}
+.site-footer  {
+    display: none;
+}
+
+/* ------------ MOBILE ------------- */
+    @media screen and (max-width: 1000px) {
+    .published-container .markdown-preview-view {
+        padding: 0 0 40px 0;
+    }       
+    /* Adding padding back to main panel */
+    .markdown-preview-sizer > div:not(div:has(img[alt~="header-img"])) {
+        padding: 0 24px;
+    }
+    img[alt~="banner-img"] {
+        border-radius: 8px;
+        margin: 0px 0;
+        background: var(--background-secondary);
+    }
+    img[alt~="banner-img"]:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}

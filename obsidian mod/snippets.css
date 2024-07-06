@@ -1,0 +1,172 @@
+
+
+/* 
+Bigger Preview Popover
+https://forum.obsidian.md/t/hoverover-pop-up-that-adjusts-size-depending-on-note-content/47790/2
+
+*/
+.popover.hover-popover > .markdown-embed {
+    height: 100%;
+    max-height: 60vh;
+    max-width: 70vh;    
+    overflow: scroll;
+}
+
+/* choose your color for light theme */
+.theme-light {
+    /* --background-secondary: #ef4343; */
+    --color-accent : #00B693;
+    --color-accent-1 : #6ec0ff;
+    --color-accent-2 : #88cbff;
+
+  }
+  
+/* choose your color for dark theme
+.theme-dark {
+   --color-accent-1: inherit;
+}
+*/
+/* 
+Cardboard Plugin 
+*/
+
+/* colored tags */
+.card-board-view a.tag[href^="#"] {
+    color: rgb(68, 0, 215);
+    display: none;
+}
+
+/* overdue */
+.card-board-view .card-board-card-highlight-area.critical {
+    background-color: red;
+}
+  
+/* due today */
+.card-board-view .card-board-card-highlight-area.important {
+    background-color: orange;
+}
+  
+/* due after today */
+.card-board-view .card-board-card-highlight-area.good {
+   background-color: rgb(6, 106, 255);
+}
+
+/* Cardboard */
+
+.theme-dark .card-board-card[data-tags~=priority-high] /*.card-board-card-highlight-area*/ {
+    color: black;
+    background-color: var(--color-accent);
+}
+
+.theme-dark .card-board-card[data-tags~=priority-high] .card-board-card-highlight-area {
+    background-color: var(--color-accent);
+}
+
+.theme-light .card-board-card[data-tags~=priority-high] /*.card-board-card-highlight-area*/ {
+    background-color: rgba(255, 213, 0, 0.4);
+    color: var(--color-accent);
+}
+.theme-light .card-board-card[data-tags~=priority-high] .card-board-card-highlight-area {
+    background-color:var(--color-accent);
+}
+
+/* Graph Node Colors */
+/*tag  */
+.graph-view.color-fill-tag {
+    color: #000000 !important; /* fdbe38  #ffff00*/
+    opacity: 1.0;
+  }
+  
+  /* attachment*/
+  .graph-view.color-fill-attachment {
+    color: #FFFFFF !important;
+    opacity: 1.0;
+  }
+
+
+/* add image to Canvas card
+https://www.reddit.com/r/ObsidianMD/comments/11n389p/i_made_a_css_snippet_to_give_your_canvas_cards_a/
+*/
+.canvas img[alt~="canvas-top"] {
+    position: relative;
+    left: -24px;
+    top: -24px;
+    object-fit: cover;
+    width: calc(100% + 62px);
+    max-width: none;
+    display: block;
+    margin-bottom: -12px;
+}
+.canvas-node-content.markdown-embed.is-loaded {
+    margin: 0;
+}
+.canvas .markdown-preview-sizer {
+    display:flex;
+    flex-direction: column;
+}
+.canvas div:has(img[alt~="canvas-top"]) {
+    display: flex;
+    order: -1;
+    max-width: 480px;
+    border-radius:16px;
+}
+/*
+.markdown-preview-view:has(img[alt~="header-img"]), .markdown-rendered:has(img[alt~="header-img"])  {
+    overflow-x: visible;
+    padding-top: 0;
+    overflow-y:scroll;
+}
+    .markdown-preview-view img[alt~="header-img"], .markdown-rendered img[alt~="header-img"] {
+    max-width: unset;
+    width: 800px;
+    height: 250px;
+    object-fit: cover;
+    object-position: -100px -100px;
+    overflow: visible;
+}
+*/
+
+/* my website */
+body {
+ --h1-size: 6em; 
+ --h2-size: 3em;
+}
+.cm-hmd-internal-link .cm-underline, .internal-link {
+    text-decoration: initial !important;
+}
+
+h6 {
+    display: none !important;
+}
+
+p:has(img[alt~="header-img"]) {
+    margin-block-start: 0;
+}
+
+img[alt~="header-img"] {
+       /* max-width: unset; */
+        width: 100%;
+        height:300px;
+        object-fit: cover;
+}
+
+img[alt~="banner-img"] {
+    border-radius: 16px;
+    border: 0px solid #FFFFFF10;
+    margin: 4px 0;
+    background: var(--background-secondary);
+}
+
+img[alt~="banner-img"]:hover {
+    transform: translate(-10px,-10px);
+    box-shadow: 10px 10px 0 var(--color-accent);
+
+}
+.markdown-rendered,.markdown-preview-view  {
+    padding: 0 0 0 0;
+}
+
+.markdown-preview-sizer > div:not(div:has(img[alt~="header-img"])) {
+    padding: 0 24px;
+}
+
