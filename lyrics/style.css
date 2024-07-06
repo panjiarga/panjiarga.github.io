@@ -69,3 +69,20 @@ button {
         transform: scale(95%);
     }
 }
+@media only screen and (max-width: 600px)  {
+
+    .quote {
+        width:80vw;
+    }
+    #lyric {
+        font-size:10vw;
+    }
+    main {
+        background-image: linear-gradient(to bottom, rgba(255,0,0,0), var(--main-color) 50%);
+        padding:4VH 10VW;
+    }
+    body {
+        background-position: top;
+        background-size: 100% auto;
+    }
+}
