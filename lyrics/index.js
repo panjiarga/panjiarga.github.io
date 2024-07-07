@@ -1,3 +1,5 @@
+let idx = -1;
+const r = document.querySelector(':root');
 const lyric = (lyrics) => {
     return {
         _text : lyrics.text,
@@ -13,7 +15,7 @@ const lyric = (lyrics) => {
 };
 const data = [
     {
-        text: "You're in the wind,<BR>I'm in the water<BR>Nobody's son,<BR>nobody's daughter",
+        text: "You're in the wind, I'm in the water<BR>Nobody's son, nobody's daughter",
         song: "Chemtrails Over The Country Club",
         artist: "Lana Del Rey",
         color: [[230, 219, 255],[0, 55, 94]]
@@ -26,13 +28,13 @@ const data = [
 
     },
     {
-        text: "Pools of sorrow,<BR>waves of joy,<BR>are drifting through my open mind",
+        text: "Pools of sorrow, waves of joy,<BR>are drifting through my open mind",
         song: "Across The Universe",
         artist: "The Beatles",
-        color: [[0, 173, 239],[255,255,255]]
+        color: [[20, 20, 20],[255,255,255]]
     },
     {
-        text: "Born in a century<BR>lost to memories<BR>Falling trees,<BR>get off your knees",
+        text: "Born in a century lost to memories<BR>Falling trees, get off your knees",
         song: "A Lot's Gonna Change",
         artist: "Weyes Blood",
         color: [[0,29,70],[255,86,202]]
@@ -44,15 +46,15 @@ const data = [
         color: [[238, 102, 74],[255,255,255]]
     },
     {
-        text: "When the muse comes calling to take me higher<BR>The awe and wonder will never tire",
+        text: "The awe and wonder will never tire<BR>Make me be that lover and be that fighter",
         song: "New World (Flow)",
         artist: "Joe Goddard & Florious",
-        color: [[107, 131, 210],[255, 204, 0]]
+        color: [[200, 200, 200],[0, 10, 10]]
     }
     
 ];
 
-let lyrics = [];
+const lyrics = [];
 for (const item of data) { 
     lyrics.push(lyric(item));
 };
@@ -72,13 +74,10 @@ const update = (num) => {
     return idx;
 };
 
-let idx = -1;
-let r = document.querySelector(':root');
-
-function refresh() {
+function eventHandler() {
     idx = update(idx);
-    console.log(`idx = ${idx}`);
+    console.log(`next = ${idx}`);
 }
 
-refresh();
-document.getElementById("next").addEventListener("click", refresh);
+idx = update(idx);
+document.getElementById("next").addEventListener("click", eventHandler);
