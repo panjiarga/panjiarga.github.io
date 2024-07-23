@@ -1,0 +1,28 @@
+
+body{
+  background-color: black;
+  margin:0;
+}
+
+form {
+  width:100%;
+  text-align: center;
+  position: fixed;
+  background-color: #131415;
+  height: auto;
+  padding:20px;
+  bottom:0;
+}
+#maze-container {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+#ball {
+  transform-origin: 200px 200px;
+  position: absolute;
+}

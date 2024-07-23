@@ -1,0 +1,131 @@
+
+:root {
+    --bg-color: var(--base10);
+    --button-color: var(--teal-light);
+    --stroke--black-5: rgba(0, 0, 0, .05);
+    --stroke--black-10: rgba(0, 0, 0, .1);
+    --stroke--white-5: rgba(255, 255, 255, .05);
+    --stroke--white-10: rgba(255, 255, 255, .1);
+    --stroke--white-50: rgba(255, 255, 255, .5);
+    --stroke-teal-50: rgba(119, 238, 202, .5);
+
+    --small-links: var(--text3);
+    --paragraph: var(--text2);
+
+    --text1: #222;
+    --text2: #333;
+    --text3: #999;
+
+
+    --base10: #fdfdfd;
+    --teal-light: rgba(0,255,178,.79);
+    --light--teal: #008680;
+    --border-radius--m: 20px;
+    --light--p0-50: rgba(233, 233, 233, .5);
+    --p900: gray;
+    --border-radius--s: 12px;
+    --light--cyan: #71e5e7;
+    --warm--red: red;
+    --warm--orange: orange;
+    --warm--yellow: yellow;
+    --warm--pink: pink;
+    --warm--maroon: maroon;
+    --warm--tan: tan;
+    --stroke--white-80: rgba(255, 255, 255, .8);
+    --light--accent: var(--light--teal-light);
+    --size: 24px;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
+    font-size: 15px;
+    display:block;
+    flex-direction: column;    
+    margin:0 auto;
+    box-sizing:border-box;
+}
+
+a {
+    color:initial;
+    text-decoration: unset;
+}
+
+nav {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4vw;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+}
+
+.navitems {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display:flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.profpic {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    height: 24px;
+    overflow: hidden;
+    border: solid 1px var(--stroke--black-10);
+    padding:4px 12px 4px 4px;
+    color: var(--text2);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap:4px;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .2);
+    img {
+        aspect-ratio: 1;
+        height:100%;
+        border-radius: 20px;
+    }
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid var(--stroke--bla);
+    background-color: var(--button-color);
+    color: var(--text2);
+    text-shadow: -1px 0 1px rgba(255, 255, 255, .77);
+    border-radius: 20px;
+    padding: 4px 20px;
+    font-size: 15px;
+    line-height: 26px;
+    transition: transform .4s;
+    display: flex;
+    flex: 0 auto;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .2);
+}
+.container {
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin:60px auto;
+}
+.gallery {
+
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: auto;
+    display: flex;
+    position: static;
+}
+h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 44px;
+    margin: 10px 0;
+}
