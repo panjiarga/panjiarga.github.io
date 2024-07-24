@@ -102,38 +102,71 @@ for (let d of mydata) {
     }
 }
 
-for (let i=0;i<data.length;i++) {
-    const item = document.createElement("div");
-    item.setAttribute("class", "items");
-    item.style.flex = ""+(data[i].width * 20)+"%";
-    item.style.maxWidth = ""+((25*data[i].width)-1)+"%";
+function createDiv (item) {
+    const element = document.createElement("div");
+    element.setAttribute("class", "items");
+    element.style.flex = ""+(item.width * 20)+"vw";
+
+    //if 1 --> 23
+    //if 2 --> 49
+    element.style.maxWidth = ""+(item.width>1 ? 49 : 22)+"vw";
 
     const content = document.createElement("div");
     content.setAttribute("class", "content");
 
     const pname = document.createElement("span");
     pname.setAttribute("class","name");
-    pname.innerHTML = data[i].name;
+    pname.innerHTML = item.name;
     content.appendChild(pname);
 
     const ptype = document.createElement("span");
     ptype.setAttribute("class","type");
-    ptype.innerHTML = data[i].type;
+    ptype.innerHTML = item.type;
     content.appendChild(ptype);
 
-    if (data[i].images.full) {
-        item.style.backgroundImage="url("+data[i].images.full+")";
+    if (item.images.full) {
+        element.style.backgroundImage="url("+item.images.full+")";
     }
-    if (data[i].images.png) {
+    if (item.images.png) {
         const img = document.createElement('img');
-        img.setAttribute("src",data[i].images.png);
+        img.setAttribute("src",item.images.png);
         content.appendChild(img);
     }
-    
-    item.appendChild(content);
-    item.style.backgroundColor=data[i].color.primary;
-    item.style.color=data[i].color.text;
-    //console.log(document.getElementById("collection"));
-    document.getElementById("collection").appendChild(item);
+
+    element.appendChild(content);
+    element.style.backgroundColor=item.color.primary;
+    element.style.color=item.color.text;
+
+    return element;
+}
+
+
+function isSquare (data) {
+    return (data.width == 1);
+}
+
+let creation;
+const collection = document.getElementById("collection");
+
+while (data.length>0) {
+    creation = data.shift();
+    if (creation.width==1) {
+        let idx = data.findIndex(isSquare);
+        console.log("idx "+idx);
+        if (idx>=0) {
+            collection.appendChild(createDiv(creation));
+            console.log("create "+creation.name);
+            creation = data.splice(idx,1)[0];
+            collection.appendChild(createDiv(creation));
+            console.log("create "+creation.name);
+        } else {
+            creation.width = 2;
+            collection.appendChild(createDiv(creation));
+            console.log("create "+creation.name);
+        }
+    } else {
+        collection.appendChild(createDiv(creation));
+        console.log("create "+creation.name);
+    }
 }
 

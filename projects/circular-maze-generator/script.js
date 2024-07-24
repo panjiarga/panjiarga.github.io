@@ -152,5 +152,5 @@ const drawExitPath = (levelExitPaths, coordinate, stroke, color) => {
     }
     return svg;
 };
-drawBase(16, 'random');
+drawBase(100, 'random');
 slider.oninput = rotateMaze;
