@@ -10,7 +10,7 @@ const mydata = [
             primary: '#55CCFF',
             text:'black'
         }
-    },{width:2,name: "Queerdo",
+    },{width:3,name: "Queerdo",
         type: "Art Performance",
         year: 2023,
         images: {
@@ -70,7 +70,7 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{width: 1,name: "Bioskop Kampus",
+    },/*{width: 1,name: "Bioskop Kampus",
         type: "Brand Identity",
         year: 2013,
         images: {
@@ -80,7 +80,7 @@ const mydata = [
             primary: '#0D0D05',
             text:'yellow'
         }
-    },{width: 1,name: "Citilink In-Flight Entertainment",
+    },*/{width: 1,name: "Citilink In-Flight Entertainment",
         type: "Prototype",
         year: 2014,
         images: {
@@ -99,6 +99,16 @@ const mydata = [
         color: {
             primary: '#31184E',
             text:'white'
+        }
+    },{width: 3,name: "Cineclub",
+        type: "Mobile App",
+        year: 2024,
+        images: {
+            png: './images/cineclub.gif'
+        },
+        color: {
+            primary: '#B92981',
+            text:'#FFCC19'
         }
     }
 ];
