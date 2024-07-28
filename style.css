@@ -105,10 +105,10 @@ button {
     position: static;
 }
 h1 {
-    font-size: 38px;
+    font-size: 6vw;
     font-weight: 700;
-    line-height: 44px;
-    margin: 10px 0;
+    line-height: 95%;
+    margin: 2vw 0;
 }
 .smalltext {
     font-size:small;
@@ -122,6 +122,7 @@ h1 {
     align-items: flex-start;
     margin: 1vw 0 1vw 0;
     display: flex;
+    min-width:300px;
 }
 .group {
     grid-column-gap: 1vw;
@@ -144,10 +145,12 @@ h1 {
     display: flex;
     transition: transform .4s;
     border-radius: 2vw;
-    border: 1px solid var(--border-color);    
+    /*border: 1px solid var(--border-color);    */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    image-rendering: optimizeQuality;
     height: 22vw;
     &:hover {
         box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .4);
@@ -158,18 +161,33 @@ h1 {
         }
     }
 }
+.square {
+    max-width:22vw;
+    flex: 1 1 22vw;
+}
+.long {
+    max-width:45vw;
+    flex: 1 1 45vw;
+}
+
+.tall {
+    max-width:22vw;
+    max-height:45vw;
+    flex: 1 1 45vw;
+}
+
 .content {
     width: 100%;
     display: block;
     position: relative;
     text-align: center;
     img {
-        max-height:77%;
-        max-width:77%;
+        max-height:70%;
+        max-width:70%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%)
+        transform: translate(-50%, -50%);
     }
     span {
         visibility:hidden;
@@ -190,11 +208,44 @@ h1 {
 }
 
 @media screen and (width<=800px){
-    .items{
-        flex:90% !important;
-        max-width:99% !important;
-        height: 44vw !important;
+    .group {
+        flex:1 1 89vw !important;
+        max-width:89vw !important;
+        height: 89vw !important;
         border-radius: 4vw;
+        max-height: 89vw;
+    }
+    h1 {
+        font-size:11vw;
+    }
+    .items {
+        height:44vw;
+        &:hover {
+            box-shadow: unset;
+            transform: none;
+            .content span {
+                visibility:visible;
+                opacity:0;
+            }
+        }
+    }
+    .content span {
+        visibility: visible;
+        opacity:0;
+    }
+    .square {
+        max-width:44vw;
+        flex: 1 1 44vw;
+    }
+    .long {
+        max-width:89vw;
+        flex: 1 1 89vw;
+    }
+    
+    .tall {
+        max-width:44vw;
+        max-height:89vw;
+        flex: 1 1 89vw;
     }
     .navitems{
         display:none;

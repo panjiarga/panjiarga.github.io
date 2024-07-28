@@ -57,7 +57,7 @@ const mydata = [
             png: './images/motorcycle.png'
         },
         color: {
-            primary: 'black',
+            primary: '#03080A',
             text:'#55CCFF'
         }
     },{width: 3,name: "Circular Maze Generator",
@@ -80,25 +80,25 @@ const mydata = [
             primary: '#0D0D05',
             text:'yellow'
         }
-    },*/{width: 1,name: "Citilink In-Flight Entertainment",
+    },*/{width: 1,name: "Citilink In-Flight App",
         type: "Prototype",
         year: 2014,
         images: {
             png: './images/citilink.png'
         },
         color: {
-            primary: '#235521',
+            primary: '#028540',
             text:'white'
         }
-    },{width: 1,name: "Luminara",
+    },{width: 2,name: "Luminara",
         type: "Web Design",
         year: 2024,
         images: {
             png: './images/luminara.png'
         },
         color: {
-            primary: '#31184E',
-            text:'white'
+            primary: '#460B61',
+            text:'#DD00C7'
         }
     },{width: 3,name: "Cineclub",
         type: "Mobile App",
@@ -109,6 +109,56 @@ const mydata = [
         color: {
             primary: '#B92981',
             text:'#FFCC19'
+        }
+    },{width: 1,name: "Parlemen Muda",
+        type: "Brand Identity",
+        year: 2024,
+        images: {
+            png: './images/parlemenmuda.jpg'
+        },
+        color: {
+            primary: '#A60F01',
+            text:'#FFFFFF'
+        }
+    },{width: 1,name: "StudentsxCEOs",
+        type: "Brand Identity",
+        year: 2024,
+        images: {
+            png: './images/sxc.png'
+        },
+        color: {
+            primary: '#090A6C',
+            text:'#FFFFFF'
+        }
+    },{width: 1,name: "Tech Talk",
+        type: "Brand Identity",
+        year: 2011,
+        images: {
+            png: './images/techtalk.png'
+        },
+        color: {
+            primary: '#13889D',
+            text:'#F9CF55'
+        }
+    },{width: 3,name: "Travel Photography",
+        type: "",
+        year: 2024,
+        images: {
+            full: './images/photography/photo'+Math.ceil(Math.random()*15)+'.jpg'
+        },
+        color: {
+            primary: 'grey',
+            text:'#FFFFFF'
+        }
+    },{width: 2,name: "Labs Project",
+        type: "Brand Identity",
+        year: 2010,
+        images: {
+            full: './images/labsproject.png'
+        },
+        color: {
+            primary: '#FFA723',
+            text:'white'
         }
     }
 ];
@@ -124,18 +174,18 @@ for (let d of mydata) {
 
 function createDiv (item) {
     const element = document.createElement("div");
-    element.setAttribute("class", "items");
-
-    //if 1 --> 23
-    //if 2 --> 49
-
-    //console.log('createDiv for');
-    //console.log(item);
-    element.style.flex = ""+((item.width==2) ? 45 : 22)+"vw";
-    element.style.maxWidth = ""+((item.width==2) ? 45 : 22)+"vw";
-    if (item.width == 3) {
-        element.style.maxHeight = "45vw";
-        element.style.flex = "1 1 45vw";
+    switch (item.width) {
+        case 1:
+            element.setAttribute("class", "items square");
+            break;
+        case 2:
+            element.setAttribute("class", "items long");
+            break;
+        case 3:
+            element.setAttribute("class", "items tall");
+            break;
+        default:
+            element.setAttribute("class", "items square");
     }
 
     const content = document.createElement("div");
