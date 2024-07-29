@@ -106,8 +106,9 @@ button {
 }
 h1 {
     font-size: 6vw;
-    font-weight: 700;
-    line-height: 95%;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -0.04em;
     margin: 2vw 0;
 }
 .smalltext {
@@ -216,7 +217,8 @@ h1 {
         max-height: 89vw;
     }
     h1 {
-        font-size:11vw;
+        font-size:12vw;
+        text-align: justify;
     }
     .items {
         height:44vw;
