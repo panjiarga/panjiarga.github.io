@@ -70,17 +70,17 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },/*{width: 1,name: "Bioskop Kampus",
+    },{width: 1,name: "Bioskop Kampus",
         type: "Brand Identity",
         year: 2013,
         images: {
-            full: './images/bioskopkampus.png'
+            png: './images/bioskopkampus.png'
         },
         color: {
-            primary: '#0D0D05',
-            text:'yellow'
+            primary: '#FFE100',
+            text:'black'
         }
-    },*/{width: 1,name: "Citilink In-Flight App",
+    },{width: 1,name: "Citilink In-Flight App",
         type: "Prototype",
         year: 2014,
         images: {
@@ -158,6 +158,16 @@ const mydata = [
         },
         color: {
             primary: '#FFA723',
+            text:'white'
+        }
+    },{width: 2,name: "DUB:LIN",
+        type: "Videography",
+        year: 2024,
+        images: {
+            full: './images/dub-lin.png'
+        },
+        color: {
+            primary: 'dark grey',
             text:'white'
         }
     }

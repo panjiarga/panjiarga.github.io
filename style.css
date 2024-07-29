@@ -176,7 +176,9 @@ h1 {
     max-height:45vw;
     flex: 1 1 45vw;
 }
-
+.red {
+    color:red;
+}
 .content {
     width: 100%;
     display: block;
@@ -213,7 +215,6 @@ h1 {
         flex:1 1 89vw !important;
         max-width:89vw !important;
         height: 89vw !important;
-        border-radius: 4vw;
         max-height: 89vw;
     }
     h1 {
@@ -222,6 +223,7 @@ h1 {
     }
     .items {
         height:44vw;
+        border-radius: 4vw;
         &:hover {
             box-shadow: unset;
             transform: none;
