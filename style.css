@@ -184,6 +184,8 @@ h1 {
     display: block;
     position: relative;
     text-align: center;
+    overflow: hidden;
+    border-radius: 2vw;
     img {
         max-height:70%;
         max-width:70%;
@@ -191,6 +193,9 @@ h1 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    video {
+        width:100%;
     }
     span {
         visibility:hidden;
