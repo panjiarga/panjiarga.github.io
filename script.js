@@ -18,7 +18,7 @@ const mydata = [
         },
         color: {
             primary: '#590D31',
-            text:'white'
+            text:'#FF40FF'
         }
     },{width: 2,name: "GO-BOX",
         type: "Brand Direction",
@@ -88,9 +88,9 @@ const mydata = [
         },
         color: {
             primary: '#028540',
-            text:'white'
+            text:'#00F900'
         }
-    },{width: 2,name: "Luminara",
+    },{width: 1,name: "Luminara",
         type: "Web Design",
         year: 2024,
         images: {
@@ -98,7 +98,7 @@ const mydata = [
         },
         color: {
             primary: '#460B61',
-            text:'#DD00C7'
+            text:'#FF40FF'
         }
     },{width: 3,name: "Cineclub",
         type: "Mobile App",
@@ -158,7 +158,7 @@ const mydata = [
         },
         color: {
             primary: '#FFA723',
-            text:'white'
+            text:'#FFFB00'
         }
     },{width: 2,name: "DUB:LIN",
         type: "Videography",
@@ -185,7 +185,7 @@ const mydata = [
         year: 2014,
         images: {
             full: './images/colorsofindia.png',
-            video: './images/colorsofindia.mp4'
+            //video: './images/colorsofindia.mp4'
         },
         color: {
             primary: 'black',
@@ -304,7 +304,7 @@ while (data.length) {
     console.log(elements[0]);
     if (data.length) { //can add second square
         let idx = data.findIndex((el)=>(el.width==elements[0].width)); //find another square with the same width
-        
+
         if (idx!=-1) { //found the same square
             x = data.splice(idx,1)[0];
             elements.push(x);
