@@ -45,8 +45,8 @@ nav {
     top: 0%;
     left: 0%;
     right: 0%;
+    z-index: 2;
 }
-
 .navitems {
     list-style-type:none;
     margin:0;
@@ -70,6 +70,7 @@ nav {
     flex-flow: row;
     align-items: center;
     gap:4px;
+    z-index: 4;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .4);
     img {
         aspect-ratio: 1;
@@ -104,12 +105,19 @@ button {
     display: flex;
     position: static;
 }
-h1 {
-    font-size: 6vw;
+h1,h2,.cv {
+    text-align: left;
     font-weight: 600;
     line-height: 100%;
     letter-spacing: -0.04em;
+    margin:0;
+}
+h1 {
+    font-size: 6vw;
     margin: 2vw 0;
+}
+h2 {
+    font-size:3.5vw;
 }
 .smalltext {
     font-size:small;
@@ -136,9 +144,25 @@ h1 {
     flex: 1 1 45vw;
     max-width: 45vw;
     max-height: 45vw;
+    z-index: 0;
 }
 .vertical {
     flex-direction: column;
+}
+.career {
+    flex-direction: column;
+    max-height: 68vw;
+    height: 68vw;
+    max-width:91vw;
+    width:91vw;
+    flex: 1 1 91vw;
+}
+.size3x3 {
+    max-width: 68vw;
+    max-height: 68vw;
+    width: 68vw;
+    height: 68vw;
+    flex: 1 1 68vw;
 }
 .items {
     box-sizing: border-box;
@@ -146,13 +170,11 @@ h1 {
     display: flex;
     transition: transform .4s;
     border-radius: 2vw;
-    /*border: 1px solid var(--border-color);    */
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    image-rendering: optimizeQuality;
     height: 22vw;
+    z-index: 0;
     &:hover {
         box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .4);
         transform: scale(1.04);
@@ -163,8 +185,14 @@ h1 {
     }
 }
 .square {
-    max-width:22vw;
+    max-width: 22vw;
+    width: 22vw;
     flex: 1 1 22vw;
+}
+.big {
+    max-width:45vw;
+    height:45v;
+    flex: 1 1 45vw;
 }
 .long {
     max-width:45vw;
@@ -172,6 +200,7 @@ h1 {
 }
 
 .tall {
+    width: 22vw;
     max-width:22vw;
     max-height:45vw;
     flex: 1 1 45vw;
@@ -179,13 +208,44 @@ h1 {
 .red {
     color:red;
 }
+.black {
+    color:black !important;
+}
 .content {
     width: 100%;
-    display: block;
+    display: flex;
     position: relative;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
+    padding: 2.5vw;
     border-radius: 2vw;
+    flex-wrap: wrap;
+    p {
+        margin:0;
+    }
+    &.linkedin{
+        font-weight: 600;
+        font-size:3.2vw;
+        display: block;
+        span {
+            font-size: 1.5vw;
+        }
+    }
+    &.cv {
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 3.5vw;
+        font-weight: 600; 
+        color:transparent;
+        background: linear-gradient(#eee, #CCC);
+        -webkit-background-clip: text;
+                background-clip: text;
+        text-align: justify;
+
+    }
+    &.head {
+        padding:10%;
+    }
     img {
         max-height:70%;
         max-width:70%;
@@ -193,19 +253,21 @@ h1 {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        z-index: 0;
     }
     video {
         width:100%;
     }
-    span {
+    span.name,span.type {
+        z-index: 1;
         visibility:hidden;
         opacity:0;
         transition: visibility .2s, opacity .3s linear;
         bottom:0;
-        padding:1vw 1.5vw;
         position: absolute;
+        padding: 1vw 1.5vw;
         &.name {
-            font-weight: 500;
+            font-weight: 600;
             left:0;
         }
         &.type {
@@ -216,33 +278,46 @@ h1 {
 }
 
 @media screen and (width<=800px){
-    .group {
+    .group{
         flex:1 1 89vw !important;
         max-width:89vw !important;
         height: 89vw !important;
         max-height: 89vw;
+        
+    }
+    .career {
+        flex-direction:row;
+        height:134vw !important;
+        flex:1 1 89vw !important;
+        max-width:89vw !important;
+        max-height: 134vw;
+        h2, .cv, .linkedin, .linkedin span {
+            font-size: 4.2vw;
+        }
     }
     h1 {
         font-size:12vw;
         text-align: justify;
     }
+
     .items {
         height:44vw;
         border-radius: 4vw;
         &:hover {
             box-shadow: unset;
             transform: none;
-            .content span {
+            .content span.name, .content span.type {
                 visibility:visible;
                 opacity:0;
             }
         }
     }
-    .content span {
+    .content span.name, .content span.type {
         visibility: visible;
         opacity:0;
     }
     .square {
+        width:44vw;
         max-width:44vw;
         flex: 1 1 44vw;
     }
@@ -250,8 +325,15 @@ h1 {
         max-width:89vw;
         flex: 1 1 89vw;
     }
+    .size3x3{
+        width:89vw;
+        height:89vw;
+        max-width: 89vw;
+        max-height: 89vw;
+    }
     
     .tall {
+        width:44vw;
         max-width:44vw;
         max-height:89vw;
         flex: 1 1 89vw;
