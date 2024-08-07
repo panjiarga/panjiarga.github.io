@@ -40,7 +40,7 @@ const mydata = [
             primary: '#203B8C',
             text:'white'
         }
-    },{featured:false,width: 2,name: "Ganesha Film Festival",
+    },{featured:true,width: 2,name: "Ganesha Film Festival",
         type: "Brand Direction",
         year: 2013,
         images: {
@@ -60,7 +60,7 @@ const mydata = [
             primary: '#03080A',
             text:'#55CCFF'
         }
-    },{featured:true,width: 3,name: "Circular Maze Generator",
+    },{featured:true,width: 1,name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -150,6 +150,16 @@ const mydata = [
             primary: 'grey',
             text:'#FFFFFF'
         }
+    },{featured:false,width: 3,name: "Photography",
+        type: "",
+        year: 2024,
+        images: {
+            full: './images/photography/photo'+(Math.floor(Math.random()*14)+1)+'.jpg'
+        },
+        color: {
+            primary: 'grey',
+            text:'#FFFFFF'
+        }
     },{featured:false,width: 2,name: "Labs Project",
         type: "Brand Identity",
         year: 2010,
@@ -160,7 +170,7 @@ const mydata = [
             primary: '#FFA723',
             text:'#FFFB00'
         }
-    },{featured:false,width: 2,name: "DUB:LIN",
+    },{featured:true,width: 2,name: "DUB:LIN",
         type: "Videography",
         year: 2024,
         images: {
@@ -190,17 +200,7 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:false,width: 3,name: "Career<BR>&Education",
-        type: "",
-        year: 1,
-        images: {
-            full: './images/cv.png',
-        },
-        color: {
-            primary: 'white',
-            text:'#222'
-        }
-    },{featured:false,width: 3,name: "Passport Cover",
+    },{featured:true,width: 3,name: "Passport Cover",
         type: "",
         year: 1,
         images: {
@@ -220,7 +220,7 @@ const mydata = [
             primary: 'dark grey',
             text:'white'
         }
-    },{featured:false,width: 3,name: "Plan(e)t",
+    },{featured:true,width: 3,name: "Plan(e)t",
         type: "Illustration",
         year: 2011,
         images: {
@@ -257,7 +257,7 @@ const mydata = [
             png: './images/labsrecital.jpg',
         },
         color: {
-            primary: '#000',
+            primary: 'maroon',
             text:'gold'
         }
     }
@@ -286,7 +286,7 @@ let data = mydata.filter((data) => ((!data.featured)/*&&(data.year>1000)*/));
 data = shuffle(data);
 featured = shuffle(featured);
 
-const publish = featured.concat(data)
+const publish = featured.concat(data);
 
 function createDiv (item) {
     const element = document.createElement("div");
@@ -326,6 +326,9 @@ function createDiv (item) {
     if (item.images.png) {
         const img = document.createElement('img');
         img.setAttribute("src",item.images.png);
+        if (item.width==3) {
+            img.setAttribute("class","prototype");
+        }
         content.appendChild(img);
     }
     if (item.images.video) {
@@ -354,9 +357,11 @@ function wrapDiv (elements,flexdir) {
 
     console.log('wrapDiv for');
     console.log(elements);
-    elements = elements.sort(WidthSort);
+    elements = elements.sort((Math.random()>=.5?WidthSortDesc:WidthSort));
+
     for (const el of elements) {
-        parent.appendChild(createDiv(el));
+        parent.appendChild(createDiv(el));    
+        console.log(el);
     }
     return parent;
 }
@@ -370,7 +375,9 @@ function WidthSort (a,b) {
     return (b.width - a.width);
 }
 
-
+function WidthSortDesc (a,b) {
+    return (a.width - b.width);
+}
 
 const collection = document.getElementById("collection");
 
