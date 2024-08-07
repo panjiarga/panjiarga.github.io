@@ -335,7 +335,7 @@ h2 {
     .content span.name, .content span.type {
         visibility: visible;
         opacity:0;
-    
+    }
     .navitems{
         display:none;
     }
