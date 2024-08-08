@@ -10,6 +10,16 @@ const mydata = [
             primary: '#55CCFF',
             text:'black'
         }
+    },{featured:true,width:1,name: "Maka Motors",
+        type: "Brand Art",
+        year: 2023,
+        images: {
+            png: './images/makamotorsalt.png'
+        },
+        color: {
+            primary: '#111111',
+            text:'#BFAC85'
+        }
     },{featured:true,width:3,name: "Queerdo",
         type: "Art Performance",
         year: 2023,
@@ -50,14 +60,14 @@ const mydata = [
             primary: 'white',
             text:'red'
         }
-    },{featured:false,width: 1,name: "EV",
-        type: "Illustration",
+    },{featured:false,width: 2,name: "Maka Motors",
+        type: "Visual Graphic",
         year: 2023,
         images: {
             png: './images/motorcycle.png'
         },
         color: {
-            primary: '#03080A',
+            primary: '#111111',
             text:'#55CCFF'
         }
     },{featured:true,width: 1,name: "Circular Maze Generator",
@@ -140,7 +150,27 @@ const mydata = [
             primary: '#13889D',
             text:'#F9CF55'
         }
+    },{featured:false,width: 1,name: "Tech Talk",
+        type: "Brand Identity",
+        year: 2011,
+        images: {
+            png: './images/techtalk2.png'
+        },
+        color: {
+            primary: '#13889D',
+            text:'#F9CF55'
+        }
     },{featured:true,width: 3,name: "Photography",
+        type: "",
+        year: 2024,
+        images: {
+            full: './images/photography/photo'+(Math.floor(Math.random()*14)+1)+'.jpg'
+        },
+        color: {
+            primary: 'grey',
+            text:'#FFFFFF'
+        }
+    },{featured:false,width: 3,name: "Photography",
         type: "",
         year: 2024,
         images: {
@@ -200,7 +230,7 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:true,width: 3,name: "Passport Cover",
+    },{featured:true,width: 1,name: "Passport Cover",
         type: "",
         year: 1,
         images: {
@@ -346,7 +376,7 @@ function createDiv (item) {
     element.appendChild(content);
     element.style.backgroundColor=item.color.primary;
     element.style.color=item.color.text;
-    element.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 0px 1px"
+    //element.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 0px 1px"
 
     return element;
 }

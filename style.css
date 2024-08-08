@@ -163,6 +163,9 @@ h2 {
         column-gap: 2%;
         row-gap: 2%;
     }
+    &:hover {
+        z-index: 1;
+    }
 }
 .career {
     flex-direction: column;
@@ -177,22 +180,25 @@ h2 {
     box-sizing: border-box;
     cursor: pointer;
     display: flex;
-    transition: transform .4s;
+    transition: .4s;
     border-radius: 2vw;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
     &:hover {
         box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .4);
-        transform: scale(1.04);
+        z-index: 3;
+        transform: scale(1.1);
         .content span {
             visibility:visible;
             opacity:1;
+            transform: scale(0.9);
         }
         .content img{
-            max-width: 80%;
-            max-height: 80%;
+            max-width: 75%;
+            max-height: 75%;
         }
     }
 }
@@ -246,26 +252,6 @@ h2 {
     p {
         margin:0;
     }
-    &.linkedin{
-        font-weight: 600;
-        font-size:3.2vw;
-        display: block;
-        span {
-            font-size: 1.5vw;
-        }
-    }
-    &.cv {
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: 1.4vw;
-        font-weight: 600; 
-        color:transparent;
-        background: linear-gradient(#eee, #CCC);
-        -webkit-background-clip: text;
-                background-clip: text;
-        text-align: justify;
-
-    }
     &.head {
         padding:10%;
     }
@@ -279,31 +265,29 @@ h2 {
         transform: translate(-50%, -50%);
         z-index: 0;
         &.prototype {
-            max-height: 80%;
-            max-width: 80%;
+            max-height: 75%;
+            max-width: 75%;
         }
     }
     video {
         width:100%;
     }
-    span.name,span.type {
+    span {
         z-index: 1;
         visibility:hidden;
         opacity:0;
-        transition: visibility .2s, opacity .3s linear;
+        transition: .3s;
         bottom:0;
         position: absolute;
-        padding: 1vw 1.5vw;
+        padding: 1vw 1.1vw;
         &.name {
             font-weight: 600;
             left:0;
-            font-size: small;
             max-width: 50%;
         }
         &.type {
             font-weight: 300;
             right:0;
-            font-size: small;
         }
     }
 }
