@@ -1,6 +1,6 @@
 
-const mydata = [
-    {featured:true,width:2,name: "Maka Motors",
+var mydata = [
+    {featured:1,width:2,name: "Maka Motors",
         type: "Brand Identity",
         year: 2023,
         images: {
@@ -10,7 +10,7 @@ const mydata = [
             primary: '#55CCFF',
             text:'black'
         }
-    },{featured:true,width:1,name: "Maka Motors",
+    },{featured:1,width:1,name: "Maka Motors",
         type: "Brand Art",
         year: 2023,
         images: {
@@ -20,7 +20,7 @@ const mydata = [
             primary: '#111111',
             text:'#BFAC85'
         }
-    },{featured:true,width:3,name: "Queerdo",
+    },{featured:1,width:3,name: "Queerdo",
         type: "Art Performance",
         year: 2023,
         images: {
@@ -30,17 +30,27 @@ const mydata = [
             primary: '#590D31',
             text:'#FF40FF'
         }
-    },{featured:true,width: 2,name: "GO-BOX",
+    },{featured:1,width: 2,name: "GO-BOX",
         type: "Brand Direction",
         year: 2016,
         images: {
             full: './images/gobox.png'
         },
         color: {
-            primary: '#E2B100',
+            primary: '#F2CB03',
             text:'#472B2F'
         }
-    },{featured:false,width: 1,name: "Ganesha Exhibition",
+    },{featured:1,width: 3,name: "GO-BOX",
+        type: "Brand Direction",
+        year: 2016,
+        images: {
+            png: './images/goboxvert.png'
+        },
+        color: {
+            primary: '#45282E',
+            text:'#F2CB03'
+        }
+    },{featured:0,width: 1,name: "Ganesha Exhibition Program",
         type: "Brand Identity",
         year: 2013,
         images: {
@@ -50,7 +60,7 @@ const mydata = [
             primary: '#203B8C',
             text:'white'
         }
-    },{featured:true,width: 2,name: "Ganesha Film Festival",
+    },{featured:1,width: 2,name: "Ganesha Film Festival",
         type: "Brand Direction",
         year: 2013,
         images: {
@@ -60,17 +70,27 @@ const mydata = [
             primary: 'white',
             text:'red'
         }
-    },{featured:false,width: 2,name: "Maka Motors",
+    },{featured:0,width: 2,name: "Maka Motors",
         type: "Visual Graphic",
         year: 2023,
         images: {
-            png: './images/motorcycle.png'
+            png: './images/makamotors.png'
         },
         color: {
-            primary: '#111111',
+            primary: '#000',
             text:'#55CCFF'
         }
-    },{featured:true,width: 1,name: "Circular Maze Generator",
+    },{featured:0,width: 1,name: "Maka Motors",
+        type: "Visual Graphic",
+        year: 2023,
+        images: {
+            png: './images/makasticker.png'
+        },
+        color: {
+            primary: '#55CCFF',
+            text:'black'
+        }
+    },{featured:1,width: 3,name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -80,17 +100,27 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:false,width: 1,name: "Bioskop Kampus",
+    },{featured:0,width: 3,name: "Circular Maze Generator",
+        type: "Code",
+        year: 2024,
+        images: {
+            full: './images/maze3.png'
+        },
+        color: {
+            primary: 'white',
+            text:'black'
+        }
+    },{featured:1,width: 1,name: "Bioskop Kampus",
         type: "Brand Identity",
         year: 2013,
         images: {
             png: './images/bioskopkampus.png'
         },
         color: {
-            primary: '#FFE100',
-            text:'black'
+            primary: '#111',
+            text:'gold'
         }
-    },{featured:true,width: 1,name: "Citilink In-Flight App",
+    },{featured:1,width: 1,name: "Citilink In-Flight App",
         type: "Prototype",
         year: 2014,
         images: {
@@ -100,7 +130,7 @@ const mydata = [
             primary: '#028540',
             text:'#00F900'
         }
-    },{featured:true,width: 1,name: "Luminara",
+    },{featured:1,width: 1,name: "Luminara",
         type: "Web Design",
         year: 2024,
         images: {
@@ -110,7 +140,7 @@ const mydata = [
             primary: '#460B61',
             text:'#FF40FF'
         }
-    },{featured:true,width: 3,name: "Cineclub",
+    },{featured:1,width: 3,name: "Cineclub",
         type: "Mobile App",
         year: 2024,
         images: {
@@ -120,7 +150,7 @@ const mydata = [
             primary: '#B92981',
             text:'#FFCC19'
         }
-    },{featured:false,width: 1,name: "Parlemen Muda",
+    },{featured:0,width: 1,name: "Parlemen Muda",
         type: "Brand Identity",
         year: 2024,
         images: {
@@ -130,17 +160,27 @@ const mydata = [
             primary: '#A60F01',
             text:'#FFFFFF'
         }
-    },{featured:false,width: 1,name: "StudentsxCEOs",
-        type: "Brand Identity",
+    },{featured:0,width: 1,name: "StudentsxCEOs",
+        type: "Brand",
         year: 2024,
         images: {
             png: './images/sxc.png'
         },
         color: {
-            primary: '#090A6C',
+            primary: '#011279',
             text:'#FFFFFF'
         }
-    },{featured:false,width: 1,name: "Tech Talk",
+    },{featured:0,width: 1,name: "StudentsxCEOs",
+        type: "Brand",
+        year: 2024,
+        images: {
+            png: './images/sxccert.png'
+        },
+        color: {
+            primary: '#011279',
+            text:'#FFFFFF'
+        }
+    },{featured:0,width: 1,name: "Tech Talk",
         type: "Brand Identity",
         year: 2011,
         images: {
@@ -150,7 +190,7 @@ const mydata = [
             primary: '#13889D',
             text:'#F9CF55'
         }
-    },{featured:false,width: 1,name: "Tech Talk",
+    },{featured:0,width: 1,name: "Tech Talk",
         type: "Brand Identity",
         year: 2011,
         images: {
@@ -160,37 +200,7 @@ const mydata = [
             primary: '#13889D',
             text:'#F9CF55'
         }
-    },{featured:true,width: 3,name: "Photography",
-        type: "",
-        year: 2024,
-        images: {
-            full: './images/photography/photo'+(Math.floor(Math.random()*14)+1)+'.jpg'
-        },
-        color: {
-            primary: 'grey',
-            text:'#FFFFFF'
-        }
-    },{featured:false,width: 3,name: "Photography",
-        type: "",
-        year: 2024,
-        images: {
-            full: './images/photography/photo'+(Math.floor(Math.random()*14)+1)+'.jpg'
-        },
-        color: {
-            primary: 'grey',
-            text:'#FFFFFF'
-        }
-    },{featured:false,width: 3,name: "Photography",
-        type: "",
-        year: 2024,
-        images: {
-            full: './images/photography/photo'+(Math.floor(Math.random()*14)+1)+'.jpg'
-        },
-        color: {
-            primary: 'grey',
-            text:'#FFFFFF'
-        }
-    },{featured:false,width: 2,name: "Labs Project",
+    },{featured:0,width: 2,name: "Labs Project",
         type: "Brand Identity",
         year: 2010,
         images: {
@@ -200,7 +210,7 @@ const mydata = [
             primary: '#FFA723',
             text:'#FFFB00'
         }
-    },{featured:true,width: 2,name: "DUB:LIN",
+    },{featured:0,width: 2,name: "DUB:LIN",
         type: "Videography",
         year: 2024,
         images: {
@@ -210,7 +220,7 @@ const mydata = [
             primary: 'dark grey',
             text:'white'
         }
-    },{featured:true,width: 2,name: "Icarus",
+    },{featured:1,width: 2,name: "Icarus",
         type: "Game",
         year: 2024,
         images: {
@@ -220,7 +230,7 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:false,width: 2,name: "Colors of India",
+    },{featured:0,width: 2,name: "Colors of India",
         type: "Videography",
         year: 2014,
         images: {
@@ -230,8 +240,8 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:true,width: 1,name: "Passport Cover",
-        type: "",
+    },{featured:1,width: 1,name: "",
+        type: "Passport Cover",
         year: 1,
         images: {
             full: './images/travel.jpg',
@@ -240,7 +250,7 @@ const mydata = [
             primary: 'transparent',
             text:'#222'
         }
-    },{featured:false,width: 1,name: "Ganadipa Satyasatama",
+    },{featured:0,width: 1,name: "Ganadipa Satyasatama",
         type: "Org Emblem",
         year: 2009,
         images: {
@@ -250,7 +260,7 @@ const mydata = [
             primary: 'dark grey',
             text:'white'
         }
-    },{featured:true,width: 3,name: "Plan(e)t",
+    },{featured:1,width: 3,name: "Plan(e)t",
         type: "Illustration",
         year: 2011,
         images: {
@@ -260,7 +270,17 @@ const mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:false,width: 3,name: "Down To Earth",
+    },{featured:0,width: 3,name: "",
+        type: "Illustration",
+        year: 2011,
+        images: {
+            full: './images/doodles.jpg',
+        },
+        color: {
+            primary: 'white',
+            text:'black'
+        }
+    },{featured:0,width: 3,name: "Down To Earth",
         type: "Illustration",
         year: 2008,
         images: {
@@ -270,7 +290,7 @@ const mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:false,width: 2,name: "Blazing Virgins",
+    },{featured:0,width: 2,name: "Blazing Virgins",
         type: "Illustration",
         year: 2008,
         images: {
@@ -280,19 +300,28 @@ const mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:false,width: 1,name: "Labs Recital",
+    },{featured:0,width: 1,name: "Labs Recital",
         type: "Brand Identity",
         year: 2008,
         images: {
             png: './images/labsrecital.jpg',
         },
         color: {
-            primary: 'maroon',
+            primary: '#111',
             text:'gold'
+        }
+    },{featured:0,width: 2,name: "Rasa",
+        type: "Short Film",
+        year: 2011,
+        images: {
+            full: './images/rasa.jpg',
+        },
+        color: {
+            primary: 'black',
+            text:'white'
         }
     }
 ];
-
 function shuffle(array) {
     var m = array.length, t, i;
   
@@ -310,16 +339,11 @@ function shuffle(array) {
   
     return array;
 }
-let featured = mydata.filter((data) => data.featured);
-let data = mydata.filter((data) => ((!data.featured)/*&&(data.year>1000)*/));
-
-data = shuffle(data);
-featured = shuffle(featured);
-
-const publish = featured.concat(data);
-
 function createDiv (item) {
     const element = document.createElement("div");
+    const content = document.createElement("div");
+    content.setAttribute("class", "content");
+    
     switch (item.width) {
         case 1:
             element.setAttribute("class", "items square");
@@ -337,8 +361,6 @@ function createDiv (item) {
             element.setAttribute("class", "items square");
     }
 
-    const content = document.createElement("div");
-    content.setAttribute("class", "content");
 
     const pname = document.createElement("span");
     pname.setAttribute("class","name");
@@ -351,12 +373,12 @@ function createDiv (item) {
     content.appendChild(ptype);
 
     if (item.images.full) {
-        element.style.backgroundImage="url("+item.images.full+")";
+        content.style.backgroundImage="url("+item.images.full+")";
     }
     if (item.images.png) {
         const img = document.createElement('img');
         img.setAttribute("src",item.images.png);
-        if (item.width==3) {
+        if (item.width>1) {
             img.setAttribute("class","prototype");
         }
         content.appendChild(img);
@@ -373,14 +395,13 @@ function createDiv (item) {
         content.appendChild(vid);
     }
 
+    content.style.backgroundColor=item.color.primary;
     element.appendChild(content);
-    element.style.backgroundColor=item.color.primary;
     element.style.color=item.color.text;
     //element.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 0px 1px"
 
     return element;
 }
-
 function wrapDiv (elements,flexdir) {
     const parent = document.createElement('div');
     parent.setAttribute('class',"group "+flexdir);
@@ -395,23 +416,15 @@ function wrapDiv (elements,flexdir) {
     }
     return parent;
 }
-
-
 function findWidthNotOne (data,w) {
     return (data.width != w);
 }
-
 function WidthSort (a,b) {
     return (b.width - a.width);
 }
-
 function WidthSortDesc (a,b) {
     return (a.width - b.width);
 }
-
-const collection = document.getElementById("collection");
-
-
 function generate (data) {
     let elements = [];
     let x;
@@ -524,5 +537,49 @@ function generate (data) {
         elements = [];
     }
 }
+
+const collection = document.getElementById("collection");
+let photoarray = [];
+let x;
+while (photoarray.length<3) {
+    x = Math.floor(Math.random()*14)+1;
+    if (!photoarray.includes(x)) {
+        photoarray.push(x);
+    }
+}
+x = 1;
+for (const idx of photoarray) {
+    mydata.push({featured:x,width: 3,name: "",
+        type: "Photography",
+        year: 2024,
+        images: {
+            full: './images/photography/photo'+idx+'.jpg'
+        },
+        color: {
+            primary: 'grey',
+            text:'#FFFFFF'
+        }
+    });
+    x=0;
+}
+let featured = mydata.filter((data) => data.featured);
+let data = mydata.filter((data) => ((!data.featured)/*&&(data.year>1000)*/));
+data = shuffle(data);
+featured = shuffle(featured);
+
+data.unshift({featured:1,width: 2,name: "",
+    type: "",
+    year: 1,
+    images: {
+        full: './images/career.png',
+    },
+    color: {
+        primary: '#D2D5D4',
+        text:'black'
+    }
+});
+const publish = featured.concat(data);
+
+
 generate(publish);
 //generate(data);
