@@ -425,10 +425,9 @@ function WidthSort (a,b) {
 function WidthSortDesc (a,b) {
     return (a.width - b.width);
 }
-function generate (data) {
+function generate (data,collection) {
     let elements = [];
     let x;
-    while (data.length) {
         //add first square
         elements.push(data.shift());
         console.log('1st');
@@ -534,10 +533,10 @@ function generate (data) {
             collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
             console.log('?');
         };
-        elements = [];
-    }
+    
 }
 
+// create photo widget 
 const collection = document.getElementById("collection");
 let photoarray = [];
 let x;
@@ -562,11 +561,12 @@ for (const idx of photoarray) {
     });
     x=0;
 }
+
 let featured = mydata.filter((data) => data.featured);
 let data = mydata.filter((data) => ((!data.featured)/*&&(data.year>1000)*/));
 data = shuffle(data);
 featured = shuffle(featured);
-
+/* add career
 data.unshift({featured:1,width: 2,name: "",
     type: "",
     year: 1,
@@ -578,8 +578,9 @@ data.unshift({featured:1,width: 2,name: "",
         text:'black'
     }
 });
+*/
 const publish = featured.concat(data);
 
-
-generate(publish);
-//generate(data);
+for (let i=0;i<8;i++) {
+    generate(publish,collection);
+}
