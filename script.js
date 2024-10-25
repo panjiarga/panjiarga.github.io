@@ -22,6 +22,7 @@ var mydata = [
         }
     },{featured:1,width:3,name: "Queerdo",
         type: "Art Performance",
+        url: "./queerdo/index.html",
         year: 2023,
         images: {
             full: './images/queerdo.png'
@@ -130,7 +131,7 @@ var mydata = [
             primary: '#028540',
             text:'#00F900'
         }
-    },{featured:1,width: 1,name: "Luminara",
+    },{featured:0,width: 1,name: "Luminara",
         type: "Web Design",
         year: 2024,
         images: {
@@ -280,7 +281,7 @@ var mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:0,width: 3,name: "Down To Earth",
+    },{featured:1,width: 3,name: "Down To Earth",
         type: "Illustration",
         year: 2008,
         images: {
@@ -320,7 +321,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    }
+    },
 ];
 function shuffle(array) {
     var m = array.length, t, i;
@@ -340,7 +341,7 @@ function shuffle(array) {
     return array;
 }
 function createDiv (item) {
-    const element = document.createElement("div");
+    const element = document.createElement("a");
     const content = document.createElement("div");
     content.setAttribute("class", "content");
     
@@ -355,12 +356,14 @@ function createDiv (item) {
             element.setAttribute("class", "items tall");
             break;
         case 4:
+            element.setAttribute("class", "items tall free");
+            break;
+        case 5:
             element.setAttribute("class", "items big");
             break;
         default:
             element.setAttribute("class", "items square");
     }
-
 
     const pname = document.createElement("span");
     pname.setAttribute("class","name");
@@ -399,7 +402,9 @@ function createDiv (item) {
     element.appendChild(content);
     element.style.color=item.color.text;
     //element.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 0px 1px"
-
+    if (item.url) {
+        element.setAttribute("href",item.url);
+    }
     return element;
 }
 function wrapDiv (elements,flexdir) {
@@ -433,13 +438,13 @@ function generate (data,collection) {
         console.log('1st');
         console.log(elements[0]);
 
-        if (elements[0].width==4) {
-            collection.appendChild(wrapDiv(elements,'big'));
+        /*if (elements[0].width==4) {
+            collection.appendChild(wrapDiv(elements,'vertical'));
         }
-        else if (data.length) { //can add second square
+        else */
+        if (data.length) { //can add second square
             let idx = data.findIndex((el)=>(el.width==elements[0].width)); //find another square with the same width
-
-            if (idx!=-1) { //found the same square
+            if ((idx!=-1) && (elements[0].width!=4)) { //found the same square
                 x = data.splice(idx,1)[0];
                 elements.push(x);
                 console.log('2nd');
@@ -490,16 +495,16 @@ function generate (data,collection) {
                                 elements.push(x);
                                 console.log('3rd');
                                 console.log(elements[2]); //third little square
-                                collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+                                collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
                                 console.log('Ppp');
                             } else {
                                 elements[1].width = elements[0].width; //extend the second square to match
-                                collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+                                collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
                                 console.log('P$');   
                             }
                         } else { //no lil square left...
                             //elements[1].width = elements[0].width;
-                            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+                            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
                             console.log('P$');
                         }
                     } else { //the rest is the other big square
@@ -509,9 +514,9 @@ function generate (data,collection) {
                             console.log(elements[0]);
                             data.push(elements[0]);
                         } else {
-                            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+                            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
                             elements[0] = data.shift();
-                            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+                            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
                         }
                     }
                 } else { // the only lil square left
@@ -530,7 +535,7 @@ function generate (data,collection) {
                 }
             }
         } else {
-            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+            collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
             console.log('?');
         };
     
@@ -580,7 +585,29 @@ data.unshift({featured:1,width: 2,name: "",
 });
 */
 const publish = featured.concat(data);
+publish.unshift({featured:1,width: 2,name: "",
+    type: "",
+    year: 1,
+    images: {
+        full: './images/career.png',
+    },
+    color: {
+        primary: '#D2D5D4',
+        text:'black'
+    }
+});
+publish.unshift({featured:1,width: 3,name: "",
+    type: "",
+    year: 1991,
+    images: {
+        full: './images/phone.jpg',
+    },
+    color: {
+        primary: 'white',
+        text:'black'
+    }
+});
 
-for (let i=0;i<8;i++) {
+for (let i=0;i<7;i++) {
     generate(publish,collection);
 }
