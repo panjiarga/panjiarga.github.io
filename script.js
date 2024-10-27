@@ -22,7 +22,7 @@ var mydata = [
         }
     },{featured:1,width:3,name: "Queerdo",
         type: "Art Performance",
-        url: "./queerdo/index.html",
+        url: "./queerdo",
         year: 2023,
         images: {
             full: './images/queerdo.png'
@@ -341,7 +341,7 @@ function shuffle(array) {
     return array;
 }
 function createDiv (item) {
-    const element = document.createElement("a");
+    const element = document.createElement("div");
     const content = document.createElement("div");
     content.setAttribute("class", "content");
     
@@ -397,14 +397,21 @@ function createDiv (item) {
         vid.appendChild(src);
         content.appendChild(vid);
     }
+    if (item.url) {
+        const link = document.createElement('a');
+        link.setAttribute("href",item.url);
+        link.innerHTML = "Learn more";
+        const span = document.createElement('span');
+        span.setAttribute("class",'url');
+        span.appendChild(link);
+        content.appendChild(span);
+    }
 
     content.style.backgroundColor=item.color.primary;
     element.appendChild(content);
     element.style.color=item.color.text;
     //element.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 0px 1px"
-    if (item.url) {
-        element.setAttribute("href",item.url);
-    }
+    
     return element;
 }
 function wrapDiv (elements,flexdir) {
@@ -570,32 +577,20 @@ for (const idx of photoarray) {
 let featured = mydata.filter((data) => data.featured);
 let data = mydata.filter((data) => ((!data.featured)/*&&(data.year>1000)*/));
 data = shuffle(data);
+featured.unshift({featured:1,width: 2,name: "",
+    type: "",
+    year: 1,
+    images: {
+        full: './images/career.png',
+    },
+    color: {
+        primary: '#D2D5D4',
+        text:'black'
+    }
+});
 featured = shuffle(featured);
-/* add career
-data.unshift({featured:1,width: 2,name: "",
-    type: "",
-    year: 1,
-    images: {
-        full: './images/career.png',
-    },
-    color: {
-        primary: '#D2D5D4',
-        text:'black'
-    }
-});
-*/
 const publish = featured.concat(data);
-publish.unshift({featured:1,width: 2,name: "",
-    type: "",
-    year: 1,
-    images: {
-        full: './images/career.png',
-    },
-    color: {
-        primary: '#D2D5D4',
-        text:'black'
-    }
-});
+
 publish.unshift({featured:1,width: 3,name: "",
     type: "",
     year: 1991,
@@ -608,6 +603,6 @@ publish.unshift({featured:1,width: 3,name: "",
     }
 });
 
-for (let i=0;i<7;i++) {
+for (let i=0;i<50;i++) {
     generate(publish,collection);
 }

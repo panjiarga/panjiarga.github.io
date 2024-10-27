@@ -266,7 +266,6 @@ h2 {
 .items {
     overflow:visible;
     box-sizing: border-box;
-    cursor: pointer;
     display: flex;
     border-radius: var(--big-radius);
     align-content: center;
@@ -374,7 +373,7 @@ h2 {
         visibility:hidden;
         opacity:0;
         transition: .3s;
-        bottom:0;
+        top:1%;
         position: absolute;
         padding: 1.1vw;
         line-height: 90%;
@@ -382,10 +381,26 @@ h2 {
             font-weight: 600;
             left:0;
             max-width: 50%;
+            font-size: 1vw;
         }
         &.type {
             font-weight: 300;
             right:0;
+        }
+        &.url {
+            bottom:1%;
+            right:-0.5%;
+            top:unset;
+        }
+        a {
+            padding:0.5vw 1.1vw;
+            background-color: var(--stroke--white-10);
+            color:var(--small-links);
+            border-radius: 1.5vw;
+            &:hover {
+                background-color: var(--stroke--white-50);
+                color: var(--text1);
+            }
         }
     }
 }
