@@ -146,12 +146,20 @@ h1,h2,.giant {
     margin:0;
 }
 .giant{
-    font-size:12vw;
+    font-size:140%;
     text-align: justify;
+    line-height: 30%;
+    &.giant2 {
+        font-size: 170%;
+    }
+    &.giant3 {
+        font-size:190%;
+        position: sticky;
+    }
 }
 h1 {
     width:98%;
-    font-size:3.45vw;
+    font-size:3.21vw;
     text-align: justify !important;
     padding-right: var(--gap);
     span {

@@ -603,6 +603,6 @@ publish.unshift({featured:1,width: 3,name: "",
     }
 });
 
-for (let i=0;i<50;i++) {
+for (let i=0;i<7;i++) {
     generate(publish,collection);
 }
