@@ -327,7 +327,7 @@ var mydata = [
         url: "https://youtu.be/YEFw8J220ME",
         year: 2024,
         images: {
-            full: './images/wingman.jpg',
+            png: './images/wingman.png',
         },
         color: {
             primary: 'black',
