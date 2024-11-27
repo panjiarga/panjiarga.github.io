@@ -412,7 +412,7 @@ function createDiv (item) {
     if (item.url) {
         const link = document.createElement('a');
         link.setAttribute("href",item.url);
-        link.innerHTML = "Learn more";
+        link.innerHTML = "link";
         const span = document.createElement('span');
         span.setAttribute("class",'url');
         span.appendChild(link);
