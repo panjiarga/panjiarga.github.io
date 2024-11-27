@@ -141,20 +141,23 @@ a {
 h1,h2,.giant {
     text-align: left;
     font-weight: 600;
-    line-height: 100%;
+    line-height: 105%;
     letter-spacing: -0.04em;
     margin:0;
 }
 .giant{
     font-size:140%;
     text-align: justify;
-    line-height: 30%;
+    line-height: 20%;
     &.giant2 {
         font-size: 170%;
     }
     &.giant3 {
-        font-size:190%;
-        position: sticky;
+        font-size:200%;
+    }
+    &.giant4 {
+        font-size:234%;
+        line-height:5%;
     }
 }
 h1 {
@@ -196,9 +199,9 @@ h2 {
 }
 .collection_wrapper {
     margin:0 auto 0 auto;
-    width:88%;
+    width:90%;
     max-width:1700px;
-    padding:0 2vw;
+    padding:0;
 }
 .sidebar {
     display:none;
