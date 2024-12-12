@@ -16,8 +16,8 @@ var mydata = [
             primary: '#55CCFF',
             text:'black'
         }
-    },{featured:0,width:1,name: "Maka Motors",
-        type: "Brand Art",
+    },{featured:1,width:1,name: "Maka Motors",
+        type: "Brand Visual",
         year: 2023,
         images: {
             png: '0e7670dd-4e6f-4532-0195-dccc32bed600'
@@ -25,6 +25,26 @@ var mydata = [
         color: {
             primary: '#111111',
             text:'#BFAC85'
+        }
+    },{featured:0,width: 2,name: "Maka Motors",
+        type: "Brand Visual",
+        year: 2023,
+        images: {
+            png: '1f18f4b2-8208-4380-bab1-98740457ce00'
+        },
+        color: {
+            primary: '#000',
+            text:'#55CCFF'
+        }
+    },{featured:1,width: 1,name: "Maka Motors",
+        type: "Brand Visual",
+        year: 2023,
+        images: {
+            png: 'd493861a-4e29-4164-d0fd-814a9a047000'
+        },
+        color: {
+            primary: '#55CCFF',
+            text:'black'
         }
     },{featured:1,width:3,name: "Queerdo",
         type: "Art Performance",
@@ -76,26 +96,6 @@ var mydata = [
         color: {
             primary: 'white',
             text:'red'
-        }
-    },{featured:0,width: 2,name: "Maka Motors",
-        type: "Visual Graphic",
-        year: 2023,
-        images: {
-            png: '1f18f4b2-8208-4380-bab1-98740457ce00'
-        },
-        color: {
-            primary: '#000',
-            text:'#55CCFF'
-        }
-    },{featured:0,width: 1,name: "Maka Motors",
-        type: "Visual Graphic",
-        year: 2023,
-        images: {
-            png: 'd493861a-4e29-4164-d0fd-814a9a047000'
-        },
-        color: {
-            primary: '#55CCFF',
-            text:'black'
         }
     },{featured:1,width: 1,name: "Circular Maze Generator",
         type: "Code",
@@ -220,6 +220,7 @@ var mydata = [
     },{featured:1,width: 2,name: "DUB:LIN",
         type: "Videography",
         year: 2024,
+        url:["https://www.instagram.com/reel/C8krlEksA9o/","Watch "],
         images: {
             full: 'dab8e49d-53f0-4428-f7e7-df5618509500',
             video:'821e0e2b184ae59391213ffb9a33419d'
@@ -241,6 +242,7 @@ var mydata = [
     },{featured:0,width: 2,name: "Colors of India",
         type: "Videography",
         year: 2014,
+        url:["https://youtu.be/4N0OiFcL97M?si=pY3Iu3mHmN17CW4R","Watch "],
         images: {
             full: '5d42d420-ed23-4777-270a-5bc207200600',
             video: 'ca8c10285da6302edc01b458ace0e562'
@@ -289,7 +291,7 @@ var mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:1,width: 3,name: "Down To Earth",
+    },{featured:1,width: 4,name: "Down To Earth",
         type: "Illustration",
         year: 2008,
         images: {
@@ -462,8 +464,9 @@ function wrapDiv (elements,flexdir) {
 
     console.log('wrapDiv for');
     console.log(elements);
-    elements = elements.sort((Math.random()>=.5?WidthSortDesc:WidthSort));
-
+    
+    elements = elements.sort((findSquare(elements,4)>=0)?WidthSortDesc:(Math.random()>=.5?WidthSortDesc:WidthSort));
+    
     for (const el of elements) {
         parent.appendChild(createDiv(el));    
         console.log(el);
@@ -488,20 +491,20 @@ function generate (data,collection) {
         console.log(elements[0]);
         if (data.length) { //can add second square
             let idx = data.findIndex((el)=>(el.width==elements[0].width)); //find another square with the same width
-            if ((idx!=-1)) { //found the same square
+            if ((idx!=-1)&&(elements[0].width!=4)) { //found the same square
                 x = data.splice(idx,1)[0];
                 elements.push(x);
-                console.log('2nd');
+                console.log('2nd');///////////
                 console.log(elements[1]);
                 //find third square?
                 if (elements[0].width==1) { //two little square
-                    idx = data.findIndex(function(el){return ((el.width!=1)&&(el.width!=4));}); //find a big square
+                    idx = data.findIndex(function(el){return (el.width!=1);}); //find a big square
                     if (idx!=-1) { //found a big square
                         x = data.splice(idx,1)[0];
                         elements.push(x);
-                        console.log('3rd');
+                        console.log('3rd');///////////
                         console.log(elements[2]);
-                        collection.appendChild(wrapDiv(elements,(elements[2].width == 3 ? 'vertical':'horizontal')));
+                        collection.appendChild(wrapDiv(elements,(elements[2].width == 3 ? 'vertical':(elements[2].width == 4 ? 'vertical':'horizontal'))));
                         console.log('bbP');
                     } else { //no big square, all little square left
                         if (data.length>0) {
@@ -521,7 +524,7 @@ function generate (data,collection) {
                     }
                 } else { //good day
                     console.log('PP');
-                    collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
+                    collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
                 }
             } else { //no same square left
                 if (elements[0].width!=1) { //if the only big square left
@@ -569,7 +572,7 @@ function generate (data,collection) {
                         elements.push(x);
                         console.log('2nd');
                         console.log(elements[1]);
-                        collection.appendChild(wrapDiv(elements,(elements[1].width == 3 ? 'vertical':'horizontal')));
+                        collection.appendChild(wrapDiv(elements,(elements[1].width == 3 ? 'vertical':(elements[1].width == 4 ? 'vertical':'horizontal'))));
                         console.log('Pp');
                     } else {
                         console.log('reject');
@@ -589,6 +592,7 @@ function findSquare (data,width) {
     return idx;
 }
 function generate2 (data,collection) {
+    console.log('gen2');
     let elements = [];
     let x;
         //add first square
@@ -597,7 +601,7 @@ function generate2 (data,collection) {
         console.log(elements[0]);
 
         if (data.length) { //can add more square
-            if ((elements[0].width==2) || (elements[0].width==3)) {
+            if (elements[0].width!=1) {
                 //find small square
                 if (findSquare(data,1)!=-1) { //found small square
                     x = data.splice(findSquare(data,1),1)[0];
@@ -605,9 +609,8 @@ function generate2 (data,collection) {
                         elements.push(x);
                         x = data.splice(findSquare(data,1),1)[0];
                         elements.push(x);
-                        collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
-                    } else { //cant find another small square
-                        data.push(elements[1]);
+                        collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
+                    } else if (elements[0].width!=4) { //cant find another small square
                         if (findSquare(data,elements[0].width)!=-1) {
                             x = data.splice(findSquare(data,elements[0].width),1)[0];
                             elements.push(x);
@@ -615,8 +618,12 @@ function generate2 (data,collection) {
                         } else {
                             data.push(elements[0]);
                         }
+                    } else {
+                        data.push(elements[0]);
                     }
                 }
+            } else {
+                data.push(elements[0]);
             }
         } else {
             collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
@@ -671,7 +678,6 @@ featured.unshift({featured:1,width: 2,name: "",
 });*/
 featured = shuffle(featured);
 const publish = featured.concat(data);
-
 publish.unshift({featured:1,width: 3,name: "",
     type: "",
     year: 1991,
@@ -683,19 +689,11 @@ publish.unshift({featured:1,width: 3,name: "",
         text:'black'
     }
 });
-generate2(publish,collection);
-
-generate(publish,collection);
-generate(publish,collection);
-
-generate2(publish,collection);
-generate(publish,collection);
-generate(publish,collection);
-
 
 while (publish.length) {
-    generate(publish,collection);
     generate2(publish,collection);
+    generate(publish,collection);
+    generate(publish,collection);
 }
 
 
