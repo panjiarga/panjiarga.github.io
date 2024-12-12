@@ -411,8 +411,8 @@ h1 {
         margin-bottom: 2%;
     }
     h1 {
-        font-size:777%;
-        line-height: 95%;
+        font-size:22vw;
+        line-height: 88%;
         margin-top:44px;
     }
     .items {
@@ -446,7 +446,7 @@ h1 {
         opacity:1;
         max-width: 30vw;
         padding:4vw 3vw;
-        font-size:22px;
+        font-size:18px;
         text-shadow:#333;
     }
     .navitems{
