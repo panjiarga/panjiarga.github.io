@@ -77,7 +77,7 @@ var mydata = [
             primary: '#45282E',
             text:'#F2CB03'
         }
-    },{featured:-1,width:1,hover:"",name: "Ganesha Exhibition Program",
+    },{featured:1,width:1,hover:"",name: "Ganesha Exhibition Program",
         type: "Brand Identity",
         year: 2013,
         images: {
@@ -97,7 +97,7 @@ var mydata = [
             primary: 'white',
             text:'red'
         }
-    },{featured:0,width:1,hover:"",name: "Circular Maze Generator",
+    },{featured:1,width:3,hover:"",name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -107,7 +107,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:0,width:1,hover:"",name: "Circular Maze Generator",
+    },{featured:-1,width:1,hover:"",name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -301,7 +301,7 @@ var mydata = [
             primary: '#00000000',
             text:'black'
         }
-    },{featured:0,width:2,hover:"",name: "Blazing Virgins",
+    },{featured:-1,width:2,hover:"",name: "Blazing Virgins",
         type: "Illustration",
         year: 2008,
         images: {
@@ -321,7 +321,7 @@ var mydata = [
             primary: '#111',
             text:'gold'
         }
-    },{featured:0,width:2,hover:"",name: "Rasa",
+    },{featured:-1,width:2,hover:"",name: "Rasa",
         type: "Short Film",
         url: ["https://www.youtube.com/watch?v=xH3r5FV-fS4",'Watch '],
         year: 2011,

@@ -259,7 +259,7 @@ h2, h2 span {
     width: 49%;
     max-width:49%;
     aspect-ratio: 1;
-    z-index: 0;
+    z-index: 1;
     gap: var(--gap);
     &.vertical {
         flex-direction: column;
@@ -273,12 +273,16 @@ h2, h2 span {
     }
 }
 .group:has(:is(.free)) {
-    z-index: 0 !important;
+    z-index: -1;
     .items.free.tall {
         z-index: -1;
         &:hover {
             transform: none;
+
         }
+    }
+    &:hover {
+        z-index: 0 !important;
     }
 }
 .items {
