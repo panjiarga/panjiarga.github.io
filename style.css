@@ -12,8 +12,9 @@
     --text2: #444;
     --text3: #888;
     --font-h1:min(12.98vw, 220px);
+    --font-h2:min(3.5vw, 59px);
     --small-radius:5px;
-    --big-radius:min(2vw, 44px);
+    --big-radius:min(1.5vw, 32px);
     --base: #fdfdfd;
     --stroke--black-5: rgba(0, 0, 0, .05);
     --stroke--black-10: rgba(0, 0, 0, .1);
@@ -32,15 +33,14 @@
 }
 * {
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
+    font-size: 15px;
 }
 body {
     background-color: var(--bg-color);
     color: var(--text1);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
-    font-size: 14px;
     display:block;
     margin:0 auto;
-    box-sizing:border-box;
 }
 a {
     text-decoration: unset;
@@ -88,7 +88,6 @@ a {
     border-radius: 20px;
     overflow: hidden;
     border: solid 1px var(--border-color);
-    padding: 8px 16px;
     padding:3px 12px 4px 3px;
     color: var(--text2);
     display: flex;
@@ -97,11 +96,14 @@ a {
     gap:4px;
     z-index: 4;
     /*box-shadow: 0 5px 10px -5px var(--shadow-color);*/
-    img {
+    &::before {
+        content: "";
         aspect-ratio: 1;
         height:24px;
         border-radius: 20px;
-    }
+        background-image: url(https://cdn.prod.website-files.com/65c39e2e3e0579dd0e853179/65ccdedd372b7dd4ab41bd27_Screenshot%202024-02-14%20at%2015.39.50.png);
+        background-size: cover;
+   }
 }
 .email {
     cursor: pointer;
@@ -114,7 +116,7 @@ a {
     flex: 0 auto;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .4);
     backdrop-filter: blur(5px);
-    width:80px;
+    width:90px;
     transition: .2s;
     overflow: hidden;
     .onhover {
@@ -130,7 +132,7 @@ a {
     &:hover{    
         background-color: #008680;
         color:white;
-        width:170px;
+        width:185px;
         .onhover {
             visibility:visible;
             opacity:1;
@@ -142,6 +144,7 @@ a {
         }
     }
 }  
+/*
 h1,h2,.giant {
     text-align: left;
     font-weight: 500;
@@ -164,11 +167,28 @@ h1,h2,.giant {
         line-height:5%;
     }
 }
+*/
 h1 {
+    font-weight: 500;
+    line-height: 105%;
+    letter-spacing: -0.04em;
+    margin:0;
     font-size: var(--font-h1);
-    text-align: justify !important;    
+    text-align: justify;    
     width: 100%;
+}
 
+h2, h2 span {
+    margin:0;
+    font-size: var(--font-h2);
+    font-weight: 500;
+    letter-spacing: -0.04em;
+    text-align: justify;   
+    line-height: 88%;
+    .emoji {
+        font-size:6vw;
+        float: inline-end;
+    }
 }
 .container {
     margin: 0 auto;
@@ -243,6 +263,7 @@ h1 {
     gap: var(--gap);
     &.vertical {
         flex-direction: column;
+        aspect-ratio: 1;
     }
     &.horizontal {
         flex-direction: row;
@@ -253,7 +274,7 @@ h1 {
 }
 .group:has(:is(.free)) {
     z-index: 0 !important;
-    .items.free {
+    .items.free.tall {
         z-index: -1;
         &:hover {
             transform: none;
@@ -272,7 +293,7 @@ h1 {
         max-width: 49%;
         width: 49%;
         flex: 1 1 49%;
-        aspect-ratio: 1;
+        aspect-ratio:1;
     }
     &.big {
         max-width:100%;
@@ -287,7 +308,6 @@ h1 {
     }
     &.tall {
         max-width: 49%;
-        /*max-width:48%;*/
         aspect-ratio: 2;
         flex: 1 1 100%;
     }
@@ -316,15 +336,30 @@ h1 {
 .items.free {
     box-shadow: 0 0 0 0px;
     justify-content: center;
-    & .content {        
-        transform: none !important;
+    &.tall .content {       
         min-width:30vw;
         background-position-y: -10%;
         background-size: contain;
+    }
+    & .content {
+        transform: none !important;
         overflow: visible;
         box-shadow: 0 0 0 0px;
         span {
             visibility: hidden !important;
+            &.title {
+                visibility: visible !important;
+                opacity: 1;
+                font-size:min(8.3vw,108pt);
+                font-weight: 650;
+                line-break: anywhere;
+                max-width: unset;
+                line-height: 68%;
+                padding:0;
+                letter-spacing: -0.04em;
+                bottom: 3%; 
+                top:unset;
+            }
         }
     }
 }
@@ -334,15 +369,51 @@ h1 {
     position: relative;
     text-align: left;
     overflow: hidden;
-    padding: 2vw;
+    padding: 1.8vw;
     border-radius: var(--big-radius);
     flex-wrap: wrap;
     transition: .4s;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    p {
-        margin:0;
+    &.poetry {
+        display: flex;
+        align-items: end;
+        background-color: #333;
+        p {
+            font-size: 1em;
+            color:white;
+        }
+    }
+
+    a {
+        color: var(--text3);
+        font-size: 0.8em;
+        font-variant-caps: all-small-caps;
+    }
+    &.twitter {
+        display: block;
+        background-color: white;
+        .profpic {
+            align-items: start;
+            border: none;
+            border-radius: 0;
+            padding:0 0 0 0;
+            &::before {
+                height: 20px;
+            }
+            strong {
+                color: var(--text1);   
+            }
+            color: var(--text3);
+        }
+        p {
+            margin:0.5vw 0 1vw 0;
+            overflow:auto;
+            height: auto;
+            font-size: 1.2em;
+            flex-grow: 1;
+        }
     }
     img {
         transition: .4s;
@@ -403,7 +474,13 @@ h1 {
     }
 }
 
-@media screen and (width<=800px){
+@media screen and (width<=1000px){
+    * {
+        font-size: 13px;
+    }
+    .collection_wrapper{
+        width:95%;
+    }
     .group{
         flex:1 1 100%;
         max-width:100%;
@@ -421,8 +498,8 @@ h1 {
             border-radius: 4vw;
         }
         &.free {
-            & .content {
-                min-width: 80vw;
+            &.tall .content {
+                min-width:90vw;
             }
         }
         &:hover .content {

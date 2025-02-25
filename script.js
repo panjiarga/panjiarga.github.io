@@ -6,7 +6,7 @@ function getvideolink(string) {
     return "https://customer-xh7nlekwyfir3ntv.cloudflarestream.com/"+ string +"/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-xh7nlekwyfir3ntv.cloudflarestream.com%2Ff8c6c06afe0ea595172b37650e0ab9dd%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600&controls=false";
 }
 var mydata = [
-    {featured:1,width:2,name: "Maka Motors",
+    {featured:1,width:2,hover:"",name: "Maka Motors",
         type: "Brand Identity",
         year: 2023,
         images: {
@@ -16,7 +16,7 @@ var mydata = [
             primary: '#55CCFF',
             text:'black'
         }
-    },{featured:1,width:1,name: "Maka Motors",
+    },{featured:1,width:1,hover:"",name: "Maka Motors",
         type: "Brand Visual",
         year: 2023,
         images: {
@@ -26,7 +26,7 @@ var mydata = [
             primary: '#111111',
             text:'#BFAC85'
         }
-    },{featured:0,width: 2,name: "Maka Motors",
+    },{featured:0,width:2,hover:"",name: "Maka Motors",
         type: "Brand Visual",
         year: 2023,
         images: {
@@ -36,7 +36,7 @@ var mydata = [
             primary: '#000',
             text:'#55CCFF'
         }
-    },{featured:1,width: 1,name: "Maka Motors",
+    },{featured:1,width:1,hover:"",name: "Maka Motors",
         type: "Brand Visual",
         year: 2023,
         images: {
@@ -46,7 +46,7 @@ var mydata = [
             primary: '#55CCFF',
             text:'black'
         }
-    },{featured:1,width:3,name: "Queerdo",
+    },{featured:1,width:3,hover:"",name: "Queerdo",
         type: "Art Performance",
         url:["https://youtu.be/_vhjyShgjfE?si=JL1r4uoF3y4anzp0&t=5770",'Watch '],
         year: 2023,
@@ -57,7 +57,7 @@ var mydata = [
             primary: '#590D31',
             text:'#FF40FF'
         }
-    },{featured:1,width: 2,name: "GO-BOX",
+    },{featured:1,width:2,hover:"",name: "GO-BOX",
         type: "Brand Direction",
         year: 2016,
         images: {
@@ -67,7 +67,7 @@ var mydata = [
             primary: '#F2CB03',
             text:'#472B2F'
         }
-    },{featured:1,width: 3,name: "GO-BOX",
+    },{featured:1,width:3,hover:"",name: "GO-BOX",
         type: "Brand Direction",
         year: 2016,
         images: {
@@ -77,7 +77,7 @@ var mydata = [
             primary: '#45282E',
             text:'#F2CB03'
         }
-    },{featured:0,width: 1,name: "Ganesha Exhibition Program",
+    },{featured:-1,width:1,hover:"",name: "Ganesha Exhibition Program",
         type: "Brand Identity",
         year: 2013,
         images: {
@@ -87,7 +87,7 @@ var mydata = [
             primary: '#203B8C',
             text:'white'
         }
-    },{featured:1,width: 2,name: "Ganesha Film Festival",
+    },{featured:0,width:2,hover:"",name: "Ganesha Film Festival",
         type: "Brand Direction",
         year: 2013,
         images: {
@@ -97,7 +97,7 @@ var mydata = [
             primary: 'white',
             text:'red'
         }
-    },{featured:1,width: 1,name: "Circular Maze Generator",
+    },{featured:0,width:1,hover:"",name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -107,7 +107,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:0,width: 1,name: "Circular Maze Generator",
+    },{featured:0,width:1,hover:"",name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -117,7 +117,7 @@ var mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:0,width: 1,name: "Bioskop Kampus",
+    },{featured:-1,width:1,hover:"",name: "Bioskop Kampus",
         type: "Brand Identity",
         year: 2013,
         images: {
@@ -127,7 +127,7 @@ var mydata = [
             primary: '#111',
             text:'gold'
         }
-    },{featured:0,width: 1,name: "Citilink In-Flight App",
+    },{featured:-1,width:1,hover:"",name: "Citilink In-Flight App",
         type: "Prototype",
         year: 2014,
         images: {
@@ -137,7 +137,7 @@ var mydata = [
             primary: '#028540',
             text:'#00F900'
         }
-    },{featured:0,width: 1,name: "Luminara",
+    },{featured:0,width:1,hover:"",name: "Luminara",
         type: "Web Design",
         year: 2024,
         images: {
@@ -147,7 +147,7 @@ var mydata = [
             primary: '#460B61',
             text:'#FF40FF'
         }
-    },{featured:1,width: 3,name: "Cineclub",
+    },{featured:1,width:3,hover:"",name: "Cineclub",
         type: "Mobile App",
         year: 2024,
         images: {
@@ -157,7 +157,7 @@ var mydata = [
             primary: '#B92981',
             text:'#FFCC19'
         }
-    },{featured:-1,width: 1,name: "Parlemen Muda",
+    },{featured:-1,width:1,hover:"",name: "Parlemen Muda",
         type: "Brand Identity",
         year: 2024,
         images: {
@@ -167,7 +167,7 @@ var mydata = [
             primary: '#A60F01',
             text:'#FFFFFF'
         }
-    },{featured:0,width: 1,name: "StudentsxCEOs",
+    },{featured:-1,width:1,hover:"",name: "StudentsxCEOs",
         type: "Brand",
         year: 2024,
         images: {
@@ -177,7 +177,7 @@ var mydata = [
             primary: '#011279',
             text:'#FFFFFF'
         }
-    },{featured:-1,width: 1,name: "StudentsxCEOs",
+    },{featured:-1,width:1,hover:"",name: "StudentsxCEOs",
         type: "Brand",
         year: 2024,
         images: {
@@ -187,7 +187,7 @@ var mydata = [
             primary: '#011279',
             text:'#FFFFFF'
         }
-    },{featured:-1,width: 1,name: "Tech Talk",
+    },{featured:-1,width:1,name: "Tech Talk",
         type: "Brand Identity",
         year: 2011,
         images: {
@@ -197,7 +197,7 @@ var mydata = [
             primary: '#13889D',
             text:'#F9CF55'
         }
-    },{featured:-1,width: 1,name: "Tech Talk",
+    },{featured:-1,width:1,name: "Tech Talk",
         type: "Brand Identity",
         year: 2011,
         images: {
@@ -207,7 +207,7 @@ var mydata = [
             primary: '#13889D',
             text:'#F9CF55'
         }
-    },{featured:0,width: 2,name: "Labs Project",
+    },{featured:-1,width:2,hover:"",name: "Labs Project",
         type: "Brand Identity",
         year: 2010,
         images: {
@@ -217,7 +217,7 @@ var mydata = [
             primary: '#FFA723',
             text:'#FFFB00'
         }
-    },{featured:1,width: 2,name: "DUB:LIN",
+    },{featured:1,width:2,hover:"",name: "DUB:LIN",
         type: "Videography",
         year: 2024,
         url:["https://www.instagram.com/reel/C8krlEksA9o/","Watch "],
@@ -229,7 +229,7 @@ var mydata = [
             primary: 'dark grey',
             text:'white'
         }
-    },{featured:1,width: 2,name: "Icarus",
+    },{featured:1,width:2,hover:"",name: "Icarus",
         type: "Game",
         year: 2024,
         images: {
@@ -239,7 +239,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:0,width: 2,name: "Colors of India",
+    },{featured:0,width:2,hover:"",name: "Colors of India",
         type: "Videography",
         year: 2014,
         url:["https://youtu.be/4N0OiFcL97M?si=pY3Iu3mHmN17CW4R","Watch "],
@@ -251,7 +251,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:1,width: 1,name: "",
+    },{featured:1,width:1,hover:"",name: "",
         type: "Passport Cover",
         year: 1,
         images: {
@@ -261,7 +261,7 @@ var mydata = [
             primary: 'transparent',
             text:'#222'
         }
-    },{featured:0,width: 1,name: "Ganadipa Satyasatama",
+    },{featured:-1,width:1,hover:"",name: "Ganadipa Satyasatama",
         type: "Org Emblem",
         year: 2009,
         images: {
@@ -271,17 +271,17 @@ var mydata = [
             primary: 'dark grey',
             text:'white'
         }
-    },{featured:1,width: 4,name: "Plan(e)t",
+    },{featured:1,width:3,hover:"free",name: "Plan(e)t",
         type: "Illustration",
         year: 2011,
         images: {
             full: '4dfd3104-00b2-429d-8dd9-51bee3c01800',
         },
         color: {
-            primary: 'white',
+            primary: '#00000000',
             text:'black'
         }
-    },{featured:-1,width: 3,name: "",
+    },{featured:-1,width:3,hover:"",name: "",
         type: "Illustration",
         year: 2011,
         images: {
@@ -291,17 +291,17 @@ var mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:1,width: 4,name: "Down To Earth",
+    },{featured:0,width:3,hover:"free",name: "Down To Earth",
         type: "Illustration",
         year: 2008,
         images: {
             png: 'f625065c-60ee-4a85-fabd-b200a136c900',
         },
         color: {
-            primary: 'white',
+            primary: '#00000000',
             text:'black'
         }
-    },{featured:0,width: 2,name: "Blazing Virgins",
+    },{featured:0,width:2,hover:"",name: "Blazing Virgins",
         type: "Illustration",
         year: 2008,
         images: {
@@ -311,7 +311,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:0,width: 1,name: "Labs Recital",
+    },{featured:-1,width:1,hover:"",name: "Labs Recital",
         type: "Brand Identity",
         year: 2008,
         images: {
@@ -321,7 +321,7 @@ var mydata = [
             primary: '#111',
             text:'gold'
         }
-    },{featured:-1,width: 2,name: "Rasa",
+    },{featured:0,width:2,hover:"",name: "Rasa",
         type: "Short Film",
         url: ["https://www.youtube.com/watch?v=xH3r5FV-fS4",'Watch '],
         year: 2011,
@@ -332,36 +332,88 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:1,width: 2,name: "Wingman",
+    },{featured:1,width:2,hover:"",name: "Wingman",
         type: "Short Film",
         url: ["https://youtu.be/YEFw8J220ME",'Watch '],
         year: 2024,
         images: {
-            png: 'f1f31877-4774-440e-28ec-637f52448a00',
+            full: '5d4a441c-523c-401c-71fc-84cafcbc4800',
+            video: '51b1d6d5f2d137ae77cfc2729ba2262b'
         },
         color: {
             primary: 'black',
             text:'white'
         }
+    },{featured:1,width:1,hover:"",name: "",desc:"Persephone",
+        type: "Poetry",
+        year: 2024,
+        images: {
+            full: '2c7079cf-f4d8-4c0f-52e9-1a2054ff8f00',
+        },
+        color: {
+            primary: 'white',
+            text:'white'
+        }
+    },{featured:1,width:1,hover:"",name: "",desc:"atnight",
+        type: "Poetry",
+        year: 2024,
+        images: {
+            full: '38de464d-41bf-4b27-20bd-5504da961e00',
+        },
+        color: {
+            primary: 'white',
+            text:'white'
+        }
+    },{featured:1,width:1,hover:"",name: "",desc:"guitar",
+        type: "Poetry",
+        year: 2024,
+        images: {
+            full: 'a35ba3c5-8754-4187-3a85-1e6a9230f600',
+        },
+        color: {
+            primary: 'white',
+            text:'white'
+        }
     },
 ];
 var photos = [
-    {id:1,url:'f24fad38-fac2-4639-f643-975ee3e4e500',title:'Phoenix Park, Dublin, Ireland'},
-    {id:2,url:'e8e7b494-aa35-4db1-64d1-fa92ee9c1e00',title:'Amalfi, Italy'},
-    {id:3,url:'5a9e66a4-8258-47a2-8104-24ea7a903500',title:'Herbert Park, Dublin, Ireland'},
-    {id:4,url:'089bc93b-ab22-45d8-b717-1321517c2300',title:'Porto, Portugal'},
-    {id:5,url:'ad7adf98-f4fb-4e06-42c4-3e7830be4f00',title:'Cappadocia, Turkey'},
-    {id:6,url:'7819879d-9d18-4c2a-9a95-b2a1c57b2600',title:'Disneyland, California, USA'},
-    {id:7,url:'377d4b3e-55ec-4f2a-349f-a0820fc99600',title:'Palawan, The Philippines'},
-    {id:8,url:'e429fb6f-ff97-4e7b-1d5f-a166e3cc7f00',title:'Cappadocia, Turkey'},
-    {id:9,url:'ab5d5b22-757c-402a-b0f4-fea132a9b500',title:'Uluwatu Kecak Dance, Bali, Indonesia'},
-    {id:10,url:'ea87ae04-8e1f-4c96-baee-23a843ffb600',title:'Seville, Spain'},
-    {id:11,url:'91c24e0e-0385-4d7a-db02-e41a5cbffe00',title:'Paris, France'},
-    {id:12,url:'966e5a98-c5d5-406e-8344-80de0c3adf00',title:'Goreme, Turkey'},
-    {id:13,url:'f364f072-e360-4c6d-5338-3501b071a900',title:'Musée d\'Orsay, Paris, France'},
-    {id:14,url:'9753bc42-b7a0-4ed0-2cc8-dc6805cd4000',title:'New York City, USA'},
-    {id:15,url:'6c085d4b-7ffb-4f65-d110-fb79175f9c00',title:'Dubrovnik, Croatia'},
+    {id:1,url:'f24fad38-fac2-4639-f643-975ee3e4e500',title:'Phoenix Park, Dublin, Ireland',width:1},
+    {id:2,url:'e8e7b494-aa35-4db1-64d1-fa92ee9c1e00',title:'Amalfi, Italy',width:3},
+    {id:3,url:'5a9e66a4-8258-47a2-8104-24ea7a903500',title:'Herbert Park, Dublin, Ireland',width:3},
+    {id:4,url:'089bc93b-ab22-45d8-b717-1321517c2300',title:'Porto, Portugal',width:3},
+    {id:5,url:'ad7adf98-f4fb-4e06-42c4-3e7830be4f00',title:'Cappadocia, Turkey',width:3},
+    {id:6,url:'7819879d-9d18-4c2a-9a95-b2a1c57b2600',title:'Disneyland, California, USA',width:3},
+    {id:7,url:'377d4b3e-55ec-4f2a-349f-a0820fc99600',title:'Palawan, The Philippines',width:3},
+    {id:8,url:'e429fb6f-ff97-4e7b-1d5f-a166e3cc7f00',title:'Cappadocia, Turkey',width:1},
+    {id:9,url:'ab5d5b22-757c-402a-b0f4-fea132a9b500',title:'Uluwatu Kecak Dance, Bali, Indonesia',width:3},
+    {id:10,url:'ea87ae04-8e1f-4c96-baee-23a843ffb600',title:'Seville, Spain',width:3},
+    /*{id:11,url:'91c24e0e-0385-4d7a-db02-e41a5cbffe00',title:'Paris, France',width:3},*/
+    {id:12,url:'966e5a98-c5d5-406e-8344-80de0c3adf00',title:'Goreme, Turkey',width:3},
+    {id:13,url:'f364f072-e360-4c6d-5338-3501b071a900',title:'Musée d\'Orsay, Paris, France',width:3},
+    {id:14,url:'9753bc42-b7a0-4ed0-2cc8-dc6805cd4000',title:'New York City, USA',width:3},
+    {id:15,url:'6c085d4b-7ffb-4f65-d110-fb79175f9c00',title:'Dubrovnik, Croatia',width:3}
 ]
+
+var instax = [
+    {id:1,url:'d2f319fa-6031-4199-e261-3fb592520600',title:'',desc:'Paris, France'},
+    {id:2,url:'f2cce737-28f4-479d-04ed-0c6aa2577e00',title:'',desc:'Santa Monica, USA'},
+    {id:3,url:'0e27ad3f-4d5c-4af8-237c-a8b04d785600',title:'',desc:'Santorini, Greece'},
+    {id:4,url:'bfe1b091-2af6-4abf-e694-2c67c4f9e200',title:'',desc:'Dubrovnik, Croatia'},
+    {id:5,url:'fffbc987-b2b3-49cf-1be0-7e285bafb900',title:'',desc:'New York, USA'},
+    {id:6,url:'15dd6aa1-1b84-49c7-91a3-51418ac49300',title:'',desc:'Yellow'},
+    {id:7,url:'b5b7f9c7-3a41-42c2-248c-620ed801b000',title:'', desc:'Athens'},
+    {id:8,url:'ab7731de-e5a2-4a72-adde-13b9ed329400',title:'', desc:'Inle Lake'},
+    {id:9,url:'e5230bda-f7b5-45d5-8eed-a7894540ff00',title:'', desc:'Pena Palace'},
+    {id:10,url:'a317746d-0bcd-4867-a4d6-22117415a300',title:'', desc:'Amalfi Coast'},
+    {id:11,url:'cfa657d1-3d5e-4d53-5aa3-f5428a5c1f00',title:'', desc:'Boat'},
+    {id:12,url:'19ae9bec-242d-4a72-e2bc-1373e52d5900',title:'', desc:'Malta'},
+    /*{id:13,url:'a9afaa86-7694-45b3-964c-6231a4a39a00',title:'', desc:'Trees'},*/
+    {id:14,url:'2b2f0d19-9432-44e2-1c63-53c23d6f2b00',title:'', desc:'Madrid Trees'},
+    {id:15,url:'7a10e36f-9420-4950-58f1-b01807c1cb00',title:'', desc:'Prague'},
+    {id:16,url:'b5e696bf-3f92-49db-1cbf-0a6bc4b72e00',title:'', desc:'Malta'},
+    {id:17,url:'2b2f0d19-9432-44e2-1c63-53c23d6f2b00',title:'', desc:'Madrid Trees'}
+]
+
 
 function shuffle(array) {
     var m = array.length, t, i;
@@ -387,54 +439,63 @@ function createDiv (item) {
     
     switch (item.width) {
         case 1:
-            element.setAttribute("class", "items square");
+            element.setAttribute("class", "items square "+item.hover);
             break;
         case 2:
-            element.setAttribute("class", "items long");
+            element.setAttribute("class", "items long "+item.hover);
             break;
         case 3:
-            element.setAttribute("class", "items tall");
+            element.setAttribute("class", "items tall "+item.hover);
             break;
         case 4:
-            element.setAttribute("class", "items tall free");
+            element.setAttribute("class", "items portrait"+item.hover);
             break;
         case 5:
-            element.setAttribute("class", "items big");
+            element.setAttribute("class", "items big "+item.hover);
             break;
         default:
-            element.setAttribute("class", "items square");
+            element.setAttribute("class", "items square "+item.hover);
     }
 
     const pname = document.createElement("span");
-    pname.setAttribute("class","name");
     pname.innerHTML = item.name;
+    if (item.type) {
+        const ptype = document.createElement("span");
+        ptype.setAttribute("class","type");
+        ptype.innerHTML = item.type;
+        content.appendChild(ptype);
+        pname.setAttribute("class","name");
+    } else {
+        pname.setAttribute("class","name title");
+    }
     content.appendChild(pname);
 
-    const ptype = document.createElement("span");
-    ptype.setAttribute("class","type");
-    ptype.innerHTML = item.type;
-    content.appendChild(ptype);
+    
 
-    if (item.images.full) {
-        content.style.backgroundImage="url("+getimagelink(item.images.full)+")";
-    }
-    if (item.images.png) {
-        const img = document.createElement('img');
-        img.setAttribute("src",getimagelink(item.images.png));
-        if (item.width>1) {
-            img.setAttribute("class","prototype");
+    if (item.images) {
+        if (item.images.full) {
+            content.style.backgroundImage="url("+getimagelink(item.images.full)+")";
         }
-        content.appendChild(img);
+        if (item.images.png) {
+            const img = document.createElement('img');
+            img.setAttribute("src",getimagelink(item.images.png));
+            if (item.width>1) {
+                img.setAttribute("class","prototype");
+            }
+            content.appendChild(img);
+        }
+        if (item.images.video) {
+            const vid = document.createElement('iframe');
+            vid.setAttribute("loading","lazy");
+            vid.setAttribute("allowfullscreen","true");
+            vid.setAttribute("allow","accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;");
+            //vid.setAttribute("style","border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;");
+            vid.setAttribute("src",getvideolink(item.images.video));
+            content.appendChild(vid);
+        }
+
     }
-    if (item.images.video) {
-        const vid = document.createElement('iframe');
-        vid.setAttribute("loading","lazy");
-        vid.setAttribute("allowfullscreen","true");
-        vid.setAttribute("allow","accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;");
-        //vid.setAttribute("style","border: none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;");
-        vid.setAttribute("src",getvideolink(item.images.video));
-        content.appendChild(vid);
-    }
+    
     if (item.url) {
         const link = document.createElement('a');
         link.setAttribute("href",item.url[0]);
@@ -450,10 +511,11 @@ function createDiv (item) {
         span.appendChild(link);
         content.appendChild(span);
     }
-
-    content.style.backgroundColor=item.color.primary;
+    if (item.color) {
+        content.style.backgroundColor=item.color.primary;
+        element.style.color=item.color.text;
+    }
     element.appendChild(content);
-    element.style.color=item.color.text;
     //element.style.boxShadow="rgba(0, 0, 0, 0.1) 0px 0px 0px 1px"
     
     return element;
@@ -465,7 +527,7 @@ function wrapDiv (elements,flexdir) {
     console.log('wrapDiv for');
     console.log(elements);
     
-    elements = elements.sort((findSquare(elements,4)>=0)?WidthSortDesc:(Math.random()>=.5?WidthSortDesc:WidthSort));
+    elements = elements.sort((widthIdx(elements,4)>=0)?WidthSortDesc:(Math.random()>=.5?WidthSortDesc:WidthSort));
     
     for (const el of elements) {
         parent.appendChild(createDiv(el));    
@@ -482,23 +544,30 @@ function WidthSort (a,b) {
 function WidthSortDesc (a,b) {
     return (a.width - b.width);
 }
+function widthFound (data,width) {
+    return ((data.findIndex((el)=>(el.width==width)))!=-1);
+}
+function widthIdx (data,width) {
+    return data.findIndex((el)=>(el.width==width));
+}
 function generate (data,collection) {
     let elements = [];
     let x;
+    let idx;
         //add first square
         elements.push(data.shift());
         console.log('1st');
         console.log(elements[0]);
-        if (data.length) { //can add second square
-            let idx = data.findIndex((el)=>(el.width==elements[0].width)); //find another square with the same width
-            if ((idx!=-1)&&(elements[0].width!=4)) { //found the same square
-                x = data.splice(idx,1)[0];
+        if ((data.length) && (elements[0].width!=5)) { //can add second square
+            //let idx = data.findIndex((el)=>(el.width==elements[0].width)); //find another square with the same width
+            if ((widthFound(data,elements[0].width))&&(elements[0].width<4)) { //found the same square
+                x = data.splice(widthIdx(data,elements[0].width),1)[0];
                 elements.push(x);
                 console.log('2nd');///////////
                 console.log(elements[1]);
                 //find third square?
                 if (elements[0].width==1) { //two little square
-                    idx = data.findIndex(function(el){return (el.width!=1);}); //find a big square
+                    idx = data.findIndex(function(el){return ((el.width!=1)&&(el.width!=5));}); //find a big square
                     if (idx!=-1) { //found a big square
                         x = data.splice(idx,1)[0];
                         elements.push(x);
@@ -587,10 +656,6 @@ function generate (data,collection) {
         };
     
 }
-function findSquare (data,width) {
-    let idx = data.findIndex((el)=>(el.width==width));
-    return idx;
-}
 function generate2 (data,collection) {
     console.log('gen2');
     let elements = [];
@@ -600,19 +665,19 @@ function generate2 (data,collection) {
         console.log('1st');
         console.log(elements[0]);
 
-        if (data.length) { //can add more square
+        if ((data.length)&&(elements[0].width!=5)) { //can add more square
             if (elements[0].width!=1) {
                 //find small square
-                if (findSquare(data,1)!=-1) { //found small square
-                    x = data.splice(findSquare(data,1),1)[0];
-                    if (findSquare(data,1)!=-1) { //found another small square
+                if (widthIdx(data,1)!=-1) { //found small square
+                    x = data.splice(widthIdx(data,1),1)[0];
+                    if (widthIdx(data,1)!=-1) { //found another small square
                         elements.push(x);
-                        x = data.splice(findSquare(data,1),1)[0];
+                        x = data.splice(widthIdx(data,1),1)[0];
                         elements.push(x);
                         collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':(elements[0].width == 4 ? 'vertical':'horizontal'))));
-                    } else if (elements[0].width!=4) { //cant find another small square
-                        if (findSquare(data,elements[0].width)!=-1) {
-                            x = data.splice(findSquare(data,elements[0].width),1)[0];
+                    } else if (elements[0].width<4) { //cant find another small square
+                        if (widthIdx(data,elements[0].width)!=-1) {
+                            x = data.splice(widthIdx(data,elements[0].width),1)[0];
                             elements.push(x);
                             collection.appendChild(wrapDiv(elements,(elements[0].width == 3 ? 'vertical':'horizontal')));
                         } else {
@@ -631,29 +696,58 @@ function generate2 (data,collection) {
         };
     
 }
-
+function generate3 (data,collection) {
+    // create group 2x3
+    // pick one item from data + find another with the same length
+    // 
+}
 
 // create photo widget 
 const collection = document.getElementById("collection");
 let photoarray = [];
 let x;
-while (photoarray.length<6) {
-    x = Math.floor(Math.random()*14)+1;
+while (photoarray.length<10) {
+    x = Math.floor(Math.random()*14);
     if (!photoarray.includes(x)) {
         photoarray.push(x);
     }
 }
 x = 0;
-let w = 1;
+let w ;
+//w = (Math.floor(Math.random()*2)?5:3);
 for (const idx of photoarray) {
-    w = (w==3?1:3);
-    x++;
     x = (x==1?0:1);
-    mydata.push({featured:1,width:w,name: photos[idx].title,
-        type: "Photography",
+    w = (Math.floor(Math.random()*2)?1:3);
+    console.log(photos[idx]+","+idx);
+    mydata.push({featured:x,
+        width:photos[idx].width,
+        name:"",
+        type: photos[idx].title,
         year: 2024,
         images: {
            full: photos[idx].url
+        },
+        color: {
+            primary: 'white',
+            text:'#FFFFFF'
+        }
+    });
+}
+photoarray=[];
+while (photoarray.length<8) {
+    x = Math.floor(Math.random()*14);
+    if (!photoarray.includes(x)) {
+        photoarray.push(x);
+    }
+}
+x = 0;
+for (const idx of photoarray) {
+    x = (x==1?0:1);
+    mydata.push({featured:x,width:1,type: instax[idx].desc,
+        name: "",
+        year: 2024,
+        images: {
+           full: instax[idx].url
         },
         color: {
             primary: 'white',
@@ -678,6 +772,8 @@ featured.unshift({featured:1,width: 2,name: "",
 });*/
 featured = shuffle(featured);
 const publish = featured.concat(data);
+/*publish.unshift({featured:1,width:1,hover:"free",name: "Hello World"
+});*/
 publish.unshift({featured:1,width: 3,name: "",
     type: "",
     year: 1991,
@@ -689,6 +785,7 @@ publish.unshift({featured:1,width: 3,name: "",
         text:'black'
     }
 });
+
 
 while (publish.length) {
     generate2(publish,collection);
