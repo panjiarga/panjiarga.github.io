@@ -16,7 +16,7 @@ var mydata = [
             primary: '#55CCFF',
             text:'black'
         }
-    },{featured:1,width:1,hover:"",name: "Maka Motors",
+    },{featured:0,width:1,hover:"",name: "Maka Motors",
         type: "Brand Visual",
         year: 2023,
         images: {
@@ -97,7 +97,7 @@ var mydata = [
             primary: 'white',
             text:'red'
         }
-    },{featured:1,width:3,hover:"",name: "Circular Maze Generator",
+    },{featured:0,width:3,hover:"",name: "Circular Maze Generator",
         type: "Code",
         year: 2024,
         images: {
@@ -117,7 +117,7 @@ var mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:-1,width:1,hover:"",name: "Bioskop Kampus",
+    },{featured:0,width:1,hover:"",name: "Bioskop Kampus",
         type: "Brand Identity",
         year: 2013,
         images: {
@@ -229,7 +229,7 @@ var mydata = [
             primary: 'dark grey',
             text:'white'
         }
-    },{featured:1,width:2,hover:"",name: "Icarus",
+    },{featured:0,width:2,hover:"",name: "Icarus",
         type: "Game",
         year: 2024,
         images: {
@@ -239,7 +239,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:0,width:2,hover:"",name: "Colors of India",
+    },{featured:1,width:2,hover:"",name: "Colors of India",
         type: "Videography",
         year: 2014,
         url:["https://youtu.be/4N0OiFcL97M?si=pY3Iu3mHmN17CW4R","Watch "],
@@ -291,7 +291,7 @@ var mydata = [
             primary: 'white',
             text:'black'
         }
-    },{featured:0,width:3,hover:"free",name: "Down To Earth",
+    },{featured:-1,width:3,hover:"free",name: "Down To Earth",
         type: "Illustration",
         year: 2008,
         images: {
@@ -332,7 +332,7 @@ var mydata = [
             primary: 'black',
             text:'white'
         }
-    },{featured:1,width:2,hover:"",name: "Wingman",
+    },{featured:0,width:2,hover:"",name: "Wingman",
         type: "Short Film",
         url: ["https://youtu.be/YEFw8J220ME",'Watch '],
         year: 2024,
@@ -345,7 +345,7 @@ var mydata = [
             text:'white'
         }
     },{featured:1,width:1,hover:"",name: "",desc:"Persephone",
-        type: "Poetry",
+        type: "",
         year: 2024,
         images: {
             full: '2c7079cf-f4d8-4c0f-52e9-1a2054ff8f00',
@@ -354,8 +354,8 @@ var mydata = [
             primary: 'white',
             text:'white'
         }
-    },{featured:1,width:1,hover:"",name: "",desc:"atnight",
-        type: "Poetry",
+    },{featured:0,width:1,hover:"",name: "",desc:"at night",
+        type: "",
         year: 2024,
         images: {
             full: '38de464d-41bf-4b27-20bd-5504da961e00',
@@ -364,11 +364,41 @@ var mydata = [
             primary: 'white',
             text:'white'
         }
-    },{featured:1,width:1,hover:"",name: "",desc:"guitar",
-        type: "Poetry",
+    },{featured:-1,width:1,hover:"",name: "",desc:"guitar",
+        type: "",
         year: 2024,
         images: {
             full: 'a35ba3c5-8754-4187-3a85-1e6a9230f600',
+        },
+        color: {
+            primary: 'white',
+            text:'white'
+        }
+    },{featured:-1,width:1,hover:"",name: "",desc:"guitar",
+        type: "",
+        year: 2024,
+        images: {
+            full: 'a35ba3c5-8754-4187-3a85-1e6a9230f600',
+        },
+        color: {
+            primary: 'white',
+            text:'white'
+        }
+    },{featured:0,width:1,hover:"",name: "",desc:"smoke break",
+        type: "",
+        year: 2024,
+        images: {
+            full: 'dcc8cc64-53e2-411b-3743-419933ea3000',
+        },
+        color: {
+            primary: 'white',
+            text:'white'
+        }
+    },{featured:1,width:1,hover:"",name: "",desc:"the test",
+        type: "",
+        year: 2024,
+        images: {
+            full: '24d4295c-f6cb-4121-df9a-528fc3d68600',
         },
         color: {
             primary: 'white',
@@ -384,7 +414,7 @@ var photos = [
     {id:5,url:'ad7adf98-f4fb-4e06-42c4-3e7830be4f00',title:'Cappadocia, Turkey',width:3},
     {id:6,url:'7819879d-9d18-4c2a-9a95-b2a1c57b2600',title:'Disneyland, California, USA',width:3},
     {id:7,url:'377d4b3e-55ec-4f2a-349f-a0820fc99600',title:'Palawan, The Philippines',width:3},
-    {id:8,url:'e429fb6f-ff97-4e7b-1d5f-a166e3cc7f00',title:'Cappadocia, Turkey',width:1},
+    {id:8,url:'e429fb6f-ff97-4e7b-1d5f-a166e3cc7f00',title:'Cappadocia, Turkey',width:2},
     {id:9,url:'ab5d5b22-757c-402a-b0f4-fea132a9b500',title:'Uluwatu Kecak Dance, Bali, Indonesia',width:3},
     {id:10,url:'ea87ae04-8e1f-4c96-baee-23a843ffb600',title:'Seville, Spain',width:3},
     /*{id:11,url:'91c24e0e-0385-4d7a-db02-e41a5cbffe00',title:'Paris, France',width:3},*/
@@ -706,7 +736,7 @@ function generate3 (data,collection) {
 const collection = document.getElementById("collection");
 let photoarray = [];
 let x;
-while (photoarray.length<10) {
+while (photoarray.length<6) {
     x = Math.floor(Math.random()*14);
     if (!photoarray.includes(x)) {
         photoarray.push(x);
@@ -734,7 +764,7 @@ for (const idx of photoarray) {
     });
 }
 photoarray=[];
-while (photoarray.length<8) {
+while (photoarray.length<4) {
     x = Math.floor(Math.random()*14);
     if (!photoarray.includes(x)) {
         photoarray.push(x);
@@ -743,8 +773,8 @@ while (photoarray.length<8) {
 x = 0;
 for (const idx of photoarray) {
     x = (x==1?0:1);
-    mydata.push({featured:x,width:1,type: instax[idx].desc,
-        name: "",
+    mydata.push({featured:x,width:1,type:"Photography",
+        name: "Our Instant World",
         year: 2024,
         images: {
            full: instax[idx].url
@@ -758,6 +788,19 @@ for (const idx of photoarray) {
 
 let featured = mydata.filter((data) => (data.featured==1));
 let data = mydata.filter((data) => (data.featured==0));
+
+featured.unshift({featured:1,width: 3,name: "",
+    type: "",
+    year: 1991,
+    images: {
+        full: '7033c319-fd2d-420b-1e6e-55f0e0a47c00',
+    },
+    color: {
+        primary: 'white',
+        text:'black'
+    }
+});
+
 data = shuffle(data);/*
 featured.unshift({featured:1,width: 2,name: "",
     type: "",
@@ -774,18 +817,6 @@ featured = shuffle(featured);
 const publish = featured.concat(data);
 /*publish.unshift({featured:1,width:1,hover:"free",name: "Hello World"
 });*/
-publish.unshift({featured:1,width: 3,name: "",
-    type: "",
-    year: 1991,
-    images: {
-        full: '7033c319-fd2d-420b-1e6e-55f0e0a47c00',
-    },
-    color: {
-        primary: 'white',
-        text:'black'
-    }
-});
-
 
 while (publish.length) {
     generate2(publish,collection);
