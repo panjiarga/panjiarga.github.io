@@ -423,28 +423,24 @@ var photos = [
     {id:14,url:'9753bc42-b7a0-4ed0-2cc8-dc6805cd4000',title:'New York City, USA',width:3},
     {id:15,url:'6c085d4b-7ffb-4f65-d110-fb79175f9c00',title:'Dubrovnik, Croatia',width:3}
 ]
-
 var instax = [
     {id:1,url:'d2f319fa-6031-4199-e261-3fb592520600',title:'',desc:'Paris, France'},
     {id:2,url:'f2cce737-28f4-479d-04ed-0c6aa2577e00',title:'',desc:'Santa Monica, USA'},
     {id:3,url:'0e27ad3f-4d5c-4af8-237c-a8b04d785600',title:'',desc:'Santorini, Greece'},
     {id:4,url:'bfe1b091-2af6-4abf-e694-2c67c4f9e200',title:'',desc:'Dubrovnik, Croatia'},
     {id:5,url:'fffbc987-b2b3-49cf-1be0-7e285bafb900',title:'',desc:'New York, USA'},
-    {id:6,url:'15dd6aa1-1b84-49c7-91a3-51418ac49300',title:'',desc:'Yellow'},
-    {id:7,url:'b5b7f9c7-3a41-42c2-248c-620ed801b000',title:'', desc:'Athens'},
-    {id:8,url:'ab7731de-e5a2-4a72-adde-13b9ed329400',title:'', desc:'Inle Lake'},
-    {id:9,url:'e5230bda-f7b5-45d5-8eed-a7894540ff00',title:'', desc:'Pena Palace'},
-    {id:10,url:'a317746d-0bcd-4867-a4d6-22117415a300',title:'', desc:'Amalfi Coast'},
-    {id:11,url:'cfa657d1-3d5e-4d53-5aa3-f5428a5c1f00',title:'', desc:'Boat'},
+    /*{id:6,url:'15dd6aa1-1b84-49c7-91a3-51418ac49300',title:'',desc:''},*/
+    {id:7,url:'b5b7f9c7-3a41-42c2-248c-620ed801b000',title:'', desc:'Athens, Greece'},
+    {id:8,url:'ab7731de-e5a2-4a72-adde-13b9ed329400',title:'', desc:'Inle Lake, Myanmar'},
+    {id:9,url:'e5230bda-f7b5-45d5-8eed-a7894540ff00',title:'', desc:'Pena Palace, Sintra, Portugal'},
+    {id:10,url:'a317746d-0bcd-4867-a4d6-22117415a300',title:'', desc:'Amalfi Coast, Italy'},
+    {id:11,url:'cfa657d1-3d5e-4d53-5aa3-f5428a5c1f00',title:'', desc:'Bali, Indonesia'},
     {id:12,url:'19ae9bec-242d-4a72-e2bc-1373e52d5900',title:'', desc:'Malta'},
     /*{id:13,url:'a9afaa86-7694-45b3-964c-6231a4a39a00',title:'', desc:'Trees'},*/
-    {id:14,url:'2b2f0d19-9432-44e2-1c63-53c23d6f2b00',title:'', desc:'Madrid Trees'},
-    {id:15,url:'7a10e36f-9420-4950-58f1-b01807c1cb00',title:'', desc:'Prague'},
+    {id:14,url:'2b2f0d19-9432-44e2-1c63-53c23d6f2b00',title:'', desc:'Madrid, Spain'},
+    {id:15,url:'7a10e36f-9420-4950-58f1-b01807c1cb00',title:'', desc:'Prague, Czech'},
     {id:16,url:'b5e696bf-3f92-49db-1cbf-0a6bc4b72e00',title:'', desc:'Malta'},
-    {id:17,url:'2b2f0d19-9432-44e2-1c63-53c23d6f2b00',title:'', desc:'Madrid Trees'}
 ]
-
-
 function shuffle(array) {
     var m = array.length, t, i;
   
@@ -733,11 +729,10 @@ function generate3 (data,collection) {
 }
 
 // create photo widget 
-const collection = document.getElementById("collection");
 let photoarray = [];
 let x;
-while (photoarray.length<6) {
-    x = Math.floor(Math.random()*14);
+while (photoarray.length<5) {
+    x = Math.floor(Math.random()*photos.length);
     if (!photoarray.includes(x)) {
         photoarray.push(x);
     }
@@ -764,8 +759,8 @@ for (const idx of photoarray) {
     });
 }
 photoarray=[];
-while (photoarray.length<4) {
-    x = Math.floor(Math.random()*14);
+while (photoarray.length<5) {
+    x = Math.floor(Math.random()*instax.length);
     if (!photoarray.includes(x)) {
         photoarray.push(x);
     }
@@ -774,7 +769,8 @@ x = 0;
 for (const idx of photoarray) {
     x = (x==1?0:1);
     mydata.push({featured:x,width:1,type:"Photography",
-        name: "Our Instant World",
+        name: "",
+        type: "" +instax[idx].desc,
         year: 2024,
         images: {
            full: instax[idx].url
@@ -818,10 +814,16 @@ const publish = featured.concat(data);
 /*publish.unshift({featured:1,width:1,hover:"free",name: "Hello World"
 });*/
 
+const collection = document.getElementById("collection");
+let group; 
+let counter=0;
 while (publish.length) {
-    generate2(publish,collection);
-    generate(publish,collection);
-    generate(publish,collection);
+    group = document.createElement("div"); 
+    group.setAttribute("class","group_wrapper");
+    group.setAttribute("id","group" + counter++);
+    generate(publish,group);
+    generate(publish,group);
+    collection.appendChild(group);
 }
 
 

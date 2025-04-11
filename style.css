@@ -249,6 +249,18 @@ h2, h2 span {
         }
     }
 }
+
+.group_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width:100%;
+    margin: 0% -1% 0% 0;
+    max-width: 100%;
+    aspect-ratio: 2;
+    flex: 1 0 100%;
+    gap:2%;
+}
 .group {
     overflow: visible;
     flex-wrap: wrap;
@@ -269,21 +281,18 @@ h2, h2 span {
         flex-direction: row;
     }
     &:hover {
-        z-index: 5;
+        z-index:3;
     }
 }
 .group:has(:is(.free)) {
-    z-index: -1;
+    z-index: 0;
     .items.free.tall {
-        z-index: -1;
+        z-index: -2;
         &:hover {
             transform: none;
-
         }
     }
-    &:hover {
-        z-index: 0;
-    }
+    
 }
 .items {
     overflow:visible;
